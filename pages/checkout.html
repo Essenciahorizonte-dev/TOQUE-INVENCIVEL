@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Finalize a sua encomenda na Toque Invencível.">
+
+    <title>Checkout | Toque Invencível</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/checkout.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <a href="../index.html" class="logo">
+
+            <span class="logo-mark">
+                TI
+            </span>
+
+            <span class="logo-text">
+
+                TOQUE INVENCÍVEL
+
+                <small>
+                    COSMÉTICOS • GUIAS • CUIDADOS
+                </small>
+
+            </span>
+
+        </a>
+
+        <button class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menu">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+
+            <a href="../index.html">
+                Início
+            </a>
+
+            <a href="loja.html">
+                Loja
+            </a>
+
+            <a href="guias.html">
+                Guias
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+        <a href="carrinho.html"
+           class="cart-button">
+
+            🛒
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="checkout-page">
+
+    <div class="checkout-container">
+
+        <h1 class="checkout-title">
+            Finalizar encomenda
+        </h1>
+
+        <p class="checkout-subtitle">
+            Preencha os seus dados para preparar o pedido.
+        </p>
+
+
+        <div id="emptyCheckout"
+             class="empty-checkout"
+             style="display:none;">
+
+            <h2>
+                O seu carrinho está vazio.
+            </h2>
+
+            <p>
+                Adicione pelo menos um produto antes de continuar.
+            </p>
+
+            <a href="loja.html">
+                IR PARA A LOJA
+            </a>
+
+        </div>
+
+
+        <div id="checkoutContent"
+             class="checkout-layout">
+
+
+            <!-- FORMULÁRIO -->
+
+            <form id="checkoutForm"
+                  class="checkout-form">
+
+
+                <section class="form-section">
+
+                    <h2>
+                        Dados pessoais
+                    </h2>
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Nome completo *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            required
+                            placeholder="Ex.: Maria João">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Telefone / WhatsApp *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            required
+                            placeholder="+258 84 000 0000">
+
+                    </div>
+
+                </section>
+
+
+                <!-- ENTREGA -->
+
+                <section class="form-section">
+
+                    <h2>
+                        Entrega
+                    </h2>
+
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            Cidade *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            required
+                            placeholder="Ex.: Maputo">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="address">
+                            Endereço / Local de entrega *
+                        </label>
+
+                        <textarea
+                            id="address"
+                            required
+                            placeholder="Indique o local onde pretende receber a encomenda."></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="deliveryArea">
+                            Zona / Bairro
+                        </label>
+
+                        <input
+                            type="text"
+                            id="deliveryArea"
+                            placeholder="Ex.: Matola, Baixa, Costa do Sol...">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="deliveryFee">
+                            Taxa de entrega
+                        </label>
+
+                        <select id="deliveryFee">
+
+                            <option value="0">
+                                A combinar
+                            </option>
+
+                            <option value="100">
+                                100 MT
+                            </option>
+
+                            <option value="150">
+                                150 MT
+                            </option>
+
+                            <option value="200">
+                                200 MT
+                            </option>
+
+                            <option value="250">
+                                250 MT
+                            </option>
+
+                            <option value="300">
+                                300 MT
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PAGAMENTO -->
+
+                <section class="form-section">
+
+                    <h2>
+                        Pagamento
+                    </h2>
+
+
+                    <div class="payment-option">
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="mpesa"
+                                required>
+
+                            M-Pesa
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="payment-option">
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="emola">
+
+                            e-Mola
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="payment-option">
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="cash">
+
+                            Pagamento na entrega
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="payment-note">
+
+                        O método de pagamento será confirmado
+                        durante o contacto para finalizar a encomenda.
+
+                        Por enquanto, o pagamento é processado
+                        manualmente.
+
+                    </div>
+
+                </section>
+
+
+                <!-- OBSERVAÇÕES -->
+
+                <section class="form-section">
+
+                    <h2>
+                        Observações
+                    </h2>
+
+
+                    <div class="form-group">
+
+                        <label for="notes">
+                            Observações adicionais
+                        </label>
+
+                        <textarea
+                            id="notes"
+                            placeholder="Alguma informação adicional sobre a entrega?"></textarea>
+
+                    </div>
+
+                </section>
+
+
+                <button
+                    type="submit"
+                    class="whatsapp-order-btn">
+
+                    ENVIAR PEDIDO PELO WHATSAPP
+
+                </button>
+
+            </form>
+
+
+            <!-- RESUMO -->
+
+            <aside class="checkout-summary">
+
+                <h2>
+                    Resumo do pedido
+                </h2>
+
+
+                <div id="checkoutProducts">
+                </div>
+
+
+                <div class="checkout-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <span id="checkoutSubtotal">
+                        0 MT
+                    </span>
+
+                </div>
+
+
+                <div class="checkout-row">
+
+                    <span>
+                        Entrega
+                    </span>
+
+                    <span id="checkoutDelivery">
+                        A combinar
+                    </span>
+
+                </div>
+
+
+                <div class="checkout-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <span id="checkoutTotal">
+                        0 MT
+                    </span>
+
+                </div>
+
+
+                <p class="checkout-warning">
+
+                    Ao enviar, o pedido será preparado
+                    através do WhatsApp para confirmação.
+
+                    O envio da encomenda só será confirmado
+                    após a validação do pedido.
+
+                </p>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <h3>
+                Toque Invencível
+            </h3>
+
+            <p>
+                Beleza é cuidado.
+                Cuidado é poder.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/main.js"></script>
+
+
+<script>
+
+/* =========================================
+   CONFIGURAÇÃO
+========================================= */
+
+/*
+   IMPORTANTE:
+   Substituir pelo número oficial da
+   Toque Invencível antes do lançamento.
+*/
+
+const WHATSAPP_NUMBER =
+    "258840000000";
+
+
+const CART_KEY =
+    "toqueInvencivelCart";
+
+
+/* =========================================
+   CARRINHO
+========================================= */
+
+function getCart() {
+
+    return JSON.parse(
+        localStorage.getItem(CART_KEY)
+    ) || [];
+
+}
+
+
+const cart =
+    getCart();
+
+
+const checkoutContent =
+    document.getElementById(
+        "checkoutContent"
+    );
+
+
+const emptyCheckout =
+    document.getElementById(
+        "emptyCheckout"
+    );
+
+
+/* =========================================
+   CARRINHO VAZIO
+========================================= */
+
+if (cart.length === 0) {
+
+    checkoutContent.style.display =
+        "none";
+
+    emptyCheckout.style.display =
+        "block";
+
+}
+
+
+/* =========================================
+   FORMATAR PREÇO
+========================================= */
+
+function formatPrice(value) {
+
+    return Number(value).toLocaleString(
+        "pt-MZ"
+    ) + " MT";
+
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+function updateCartCount() {
+
+    const total =
+        cart.reduce(
+            (sum, item) =>
+                sum + Number(item.quantity),
+            0
+        );
+
+
+    document.getElementById(
+        "cartCount"
+    ).textContent = total;
+
+}
+
+
+updateCartCount();
+
+
+/* =========================================
+   MOSTRAR PRODUTOS
+========================================= */
+
+function renderCheckoutProducts() {
+
+    const container =
+        document.getElementById(
+            "checkoutProducts"
+        );
+
+
+    let subtotal = 0;
+
+
+    container.innerHTML = "";
+
+
+    cart.forEach(product => {
+
+        const itemTotal =
+            Number(product.price) *
+            Number(product.quantity);
+
+
+        subtotal += itemTotal;
+
+
+        const productElement =
+            document.createElement("div");
+
+
+        productElement.className =
+            "checkout-product";
+
+
+        productElement.innerHTML = `
+
+            <span class="checkout-product-name">
+
+                ${product.name}
+
+                × ${product.quantity}
+
+            </span>
+
+            <strong>
+
+                ${formatPrice(itemTotal)}
+
+            </strong>
+
+        `;
+
+
+        container.appendChild(
+            productElement
+        );
+
+    });
+
+
+    document.getElementById(
+        "checkoutSubtotal"
+    ).textContent =
+        formatPrice(subtotal);
+
+
+    updateTotal(subtotal);
+
+}
+
+
+renderCheckoutProducts();
+
+
+/* =========================================
+   ENTREGA + TOTAL
+========================================= */
+
+function updateTotal(subtotal) {
+
+    const deliveryValue =
+        Number(
+            document.getElementById(
+                "deliveryFee"
+            ).value
+        );
+
+
+    const deliveryElement =
+        document.getElementById(
+            "checkoutDelivery"
+        );
+
+
+    if (deliveryValue === 0) {
+
+        deliveryElement.textContent =
+            "A combinar";
+
+    } else {
+
+        deliveryElement.textContent =
+            formatPrice(deliveryValue);
+
+    }
+
+
+    document.getElementById(
+        "checkoutTotal"
+    ).textContent =
+        formatPrice(
+            subtotal + deliveryValue
+        );
+
+}
+
+
+document.getElementById(
+    "deliveryFee"
+).addEventListener(
+    "change",
+    () => {
+
+        let subtotal = 0;
+
+
+        cart.forEach(product => {
+
+            subtotal +=
+                Number(product.price) *
+                Number(product.quantity);
+
+        });
+
+
+        updateTotal(subtotal);
+
+    }
+);
+
+
+/* =========================================
+   ENVIAR PEDIDO
+========================================= */
+
+document.getElementById(
+    "checkoutForm"
+).addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "name"
+            ).value.trim();
+
+
+        const phone =
+            document.getElementById(
+                "phone"
+            ).value.trim();
+
+
+        const city =
+            document.getElementById(
+                "city"
+            ).value.trim();
+
+
+        const address =
+            document.getElementById(
+                "address"
+            ).value.trim();
+
+
+        const area =
+            document.getElementById(
+                "deliveryArea"
+            ).value.trim();
+
+
+        const deliveryFee =
+            Number(
+                document.getElementById(
+                    "deliveryFee"
+                ).value
+            );
+
+
+        const payment =
+            document.querySelector(
+                'input[name="payment"]:checked'
+            );
+
+
+        const notes =
+            document.getElementById(
+                "notes"
+            ).value.trim();
+
+
+        let subtotal = 0;
+
+
+        let productsText = "";
+
+
+        cart.forEach(product => {
+
+            const itemTotal =
+                Number(product.price) *
+                Number(product.quantity);
+
+
+            subtotal += itemTotal;
+
+
+            productsText +=
+                `• ${product.name} x${product.quantity} — ${formatPrice(itemTotal)}\n`;
+
+        });
+
+
+        const total =
+            subtotal + deliveryFee;
+
+
+        let deliveryText =
+            deliveryFee === 0
+                ? "A combinar"
+                : formatPrice(deliveryFee);
+
+
+        const paymentNames = {
+
+            mpesa: "M-Pesa",
+
+            emola: "e-Mola",
+
+            cash: "Pagamento na entrega"
+
+        };
+
+
+        const paymentText =
+            paymentNames[
+                payment.value
+            ] || payment.value;
+
+
+        const message =
+
+`✨ *NOVO PEDIDO — TOQUE INVENCÍVEL*
+
+👤 *Cliente:*
+${name}
+
+📱 *Telefone:*
+${phone}
+
+📍 *Entrega:*
+${city}
+${area}
+${address}
+
+🛍️ *Produtos:*
+${productsText}
+
+💰 *Subtotal:*
+${formatPrice(subtotal)}
+
+🚚 *Entrega:*
+${deliveryText}
+
+💳 *Pagamento:*
+${paymentText}
+
+💵 *TOTAL:*
+${formatPrice(total)}
+
+📝 *Observações:*
+${notes || "Nenhuma"}
+
+Por favor, confirme a disponibilidade e os detalhes da encomenda.`;
+
+
+        const whatsappURL =
+            "https://wa.me/" +
+            WHATSAPP_NUMBER +
+            "?text=" +
+            encodeURIComponent(message);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    });
+
+</script>
+
+</body>
+
+  </html>
