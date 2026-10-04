@@ -1,0 +1,477 @@
+/* =========================================
+   TOQUE INVENCÍVEL
+   ESTILO DA LOJA
+========================================= */
+
+
+/* =========================================
+   HERO DA LOJA
+========================================= */
+
+.shop-hero {
+
+    background:
+
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(216, 170, 55, 0.16),
+            transparent 35%
+        ),
+
+        var(--preto);
+
+    color: white;
+
+    padding: 85px 0;
+
+}
+
+
+.shop-hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 6vw, 68px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+}
+
+
+.shop-hero p {
+
+    max-width: 550px;
+
+    color: #bdbdbd;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================================
+   ÁREA DA LOJA
+========================================= */
+
+.shop-section {
+
+    padding: 70px 0 100px;
+
+    background: var(--creme);
+
+}
+
+
+.shop-toolbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.shop-label {
+
+    display: block;
+
+    color: #9a7a2d;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.shop-toolbar h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+}
+
+
+.shop-filter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.shop-filter label {
+
+    font-size: 11px;
+
+    color: #777;
+
+}
+
+
+.shop-filter select {
+
+    height: 42px;
+
+    padding: 0 35px 0 13px;
+
+    border: 1px solid #d8d0c2;
+
+    background: white;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.shop-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+
+}
+
+
+
+/* =========================================
+   PRODUTO
+========================================= */
+
+.shop-product {
+
+    background: white;
+
+    border: 1px solid #e4ddd1;
+
+    transition: 0.3s ease;
+
+}
+
+
+.shop-product:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 45px rgba(0,0,0,0.09);
+
+}
+
+
+
+/* =========================================
+   IMAGEM
+========================================= */
+
+.shop-product-image {
+
+    height: 330px;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #e8dcc7,
+            #f8f2e7 65%
+        );
+
+    color: #9b8967;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.product-badge {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    background: var(--preto);
+
+    color: var(--dourado);
+
+    padding: 7px 10px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.shop-product-info {
+
+    padding: 22px;
+
+}
+
+
+.shop-product-category {
+
+    color: #9a7a2d;
+
+    text-transform: uppercase;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 600;
+
+}
+
+
+.shop-product-info h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    margin: 8px 0;
+
+}
+
+
+.shop-product-description {
+
+    color: #777;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    min-height: 38px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.shop-product-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+
+.shop-product-bottom strong {
+
+    color: #6e5418;
+
+    font-size: 15px;
+
+}
+
+
+.shop-product-button {
+
+    background: var(--preto);
+
+    color: white;
+
+    min-height: 38px;
+
+    padding: 0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+
+.shop-product-button:hover {
+
+    background: var(--dourado);
+
+    color: var(--preto);
+
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .shop-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .shop-hero {
+
+        padding: 65px 0;
+
+    }
+
+
+    .shop-section {
+
+        padding: 50px 0 70px;
+
+    }
+
+
+    .shop-toolbar {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .shop-toolbar h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .shop-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .shop-product-image {
+
+        height: 210px;
+
+    }
+
+
+    .shop-product-info {
+
+        padding: 14px;
+
+    }
+
+
+    .shop-product-info h3 {
+
+        font-size: 17px;
+
+    }
+
+
+    .shop-product-description {
+
+        font-size: 10px;
+
+    }
+
+
+    .shop-product-bottom {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+
+    .shop-product-button {
+
+        width: 100%;
+
+    }
+
+}
+
+
+
+@media (max-width: 380px) {
+
+    .shop-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .shop-product-image {
+
+        height: 270px;
+
+    }
+
+}
