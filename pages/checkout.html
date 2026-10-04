@@ -1,100 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Finalize a sua encomenda na Toque Invencível.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Checkout | Toque Invencível</title>
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="../css/style.css">
-
-    <link rel="stylesheet"
-          href="../css/checkout.css">
-
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkout.css">
 </head>
 
 <body>
 
 <header class="site-header">
 
-    <div class="header-container">
+    <div class="container header-inner">
 
         <a href="../index.html" class="logo">
-
-            <span class="logo-mark">
-                TI
-            </span>
+            <span class="logo-mark">TI</span>
 
             <span class="logo-text">
-
-                TOQUE INVENCÍVEL
-
-                <small>
-                    COSMÉTICOS • GUIAS • CUIDADOS
-                </small>
-
+                <strong>TOQUE INVENCÍVEL</strong>
+                <small>Beleza é cuidado. Cuidado é poder.</small>
             </span>
-
         </a>
 
-        <button class="menu-button"
-                id="menuButton"
-                aria-label="Abrir menu">
+        <button class="menu-button" id="menuButton" aria-label="Abrir menu">
             ☰
         </button>
 
         <nav class="main-nav" id="mainNav">
+            <a href="../index.html">Início</a>
+            <a href="loja.html">Loja</a>
+            <a href="guias.html">Guias</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contacto.html">Contacto</a>
 
-            <a href="../index.html">
-                Início
+            <a href="carrinho.html" class="cart-link">
+                Carrinho
+                <span id="cartCount">0</span>
             </a>
-
-            <a href="loja.html">
-                Loja
-            </a>
-
-            <a href="guias.html">
-                Guias
-            </a>
-
-            <a href="sobre.html">
-                Sobre
-            </a>
-
-            <a href="contacto.html">
-                Contacto
-            </a>
-
         </nav>
-
-        <a href="carrinho.html"
-           class="cart-button">
-
-            🛒
-
-            <span id="cartCount">
-                0
-            </span>
-
-        </a>
 
     </div>
 
@@ -105,341 +56,292 @@
 
     <div class="checkout-container">
 
-        <h1 class="checkout-title">
-            Finalizar encomenda
-        </h1>
-
-        <p class="checkout-subtitle">
-            Preencha os seus dados para preparar o pedido.
-        </p>
-
-
-        <div id="emptyCheckout"
-             class="empty-checkout"
-             style="display:none;">
-
-            <h2>
-                O seu carrinho está vazio.
-            </h2>
-
+        <div class="checkout-heading">
+            <span>FINALIZAR PEDIDO</span>
+            <h1>Finalize a sua compra</h1>
             <p>
-                Adicione pelo menos um produto antes de continuar.
+                Preencha os seus dados para enviarmos o pedido pelo WhatsApp.
             </p>
-
-            <a href="loja.html">
-                IR PARA A LOJA
-            </a>
-
         </div>
 
 
-        <div id="checkoutContent"
-             class="checkout-layout">
-
+        <div class="checkout-grid">
 
             <!-- FORMULÁRIO -->
 
-            <form id="checkoutForm"
-                  class="checkout-form">
+            <section class="checkout-card">
+
+                <div class="card-title">
+                    <span class="title-number">01</span>
+
+                    <div>
+                        <h2>Dados do cliente</h2>
+                        <p>Informe os dados para a entrega.</p>
+                    </div>
+                </div>
 
 
-                <section class="form-section">
-
-                    <h2>
-                        Dados pessoais
-                    </h2>
-
+                <form id="checkoutForm">
 
                     <div class="form-group">
-
-                        <label for="name">
-                            Nome completo *
+                        <label for="nome">
+                            Nome completo
                         </label>
 
                         <input
                             type="text"
-                            id="name"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite o seu nome"
                             required
-                            placeholder="Ex.: Maria João">
-
+                        >
                     </div>
 
 
                     <div class="form-group">
-
-                        <label for="phone">
-                            Telefone / WhatsApp *
+                        <label for="telefone">
+                            WhatsApp
                         </label>
 
                         <input
                             type="tel"
-                            id="phone"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="Ex.: 856948492"
                             required
-                            placeholder="+258 84 000 0000">
-
-                    </div>
-
-                </section>
-
-
-                <!-- ENTREGA -->
-
-                <section class="form-section">
-
-                    <h2>
-                        Entrega
-                    </h2>
-
-
-                    <div class="form-group">
-
-                        <label for="city">
-                            Cidade *
-                        </label>
-
-                        <input
-                            type="text"
-                            id="city"
-                            required
-                            placeholder="Ex.: Maputo">
-
+                        >
                     </div>
 
 
-                    <div class="form-group">
+                    <div class="form-row">
 
-                        <label for="address">
-                            Endereço / Local de entrega *
+                        <div class="form-group">
+                            <label for="cidade">
+                                Cidade
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cidade"
+                                name="cidade"
+                                placeholder="Ex.: Maputo"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="bairro">
+                                Bairro
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bairro"
+                                name="bairro"
+                                placeholder="Seu bairro"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="endereco">
+                            Endereço
                         </label>
 
                         <textarea
-                            id="address"
+                            id="endereco"
+                            name="endereco"
+                            rows="3"
+                            placeholder="Rua, avenida, número da casa ou outro ponto de referência"
                             required
-                            placeholder="Indique o local onde pretende receber a encomenda."></textarea>
+                        ></textarea>
+                    </div>
+
+
+                    <!-- ENTREGA -->
+
+                    <div class="delivery-box">
+
+                        <div class="delivery-icon">
+                            🚚
+                        </div>
+
+                        <div>
+                            <strong>Taxa de entrega</strong>
+
+                            <p>
+                                50 MT adicionados automaticamente ao pedido.
+                            </p>
+                        </div>
+
+                        <strong class="delivery-price">
+                            50 MT
+                        </strong>
+
+                    </div>
+
+
+                    <!-- PAGAMENTO -->
+
+                    <div class="card-title payment-title">
+
+                        <span class="title-number">02</span>
+
+                        <div>
+                            <h2>Forma de pagamento</h2>
+                            <p>Escolha como pretende pagar.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-options">
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="pagamento"
+                                value="M-Pesa"
+                                required
+                            >
+
+                            <span class="payment-content">
+                                <strong>M-Pesa</strong>
+                                <small>Pagamento por M-Pesa</small>
+                            </span>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="pagamento"
+                                value="e-Mola"
+                            >
+
+                            <span class="payment-content">
+                                <strong>e-Mola</strong>
+                                <small>Pagamento por e-Mola</small>
+                            </span>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="pagamento"
+                                value="Pagamento na entrega"
+                            >
+
+                            <span class="payment-content">
+                                <strong>Pagamento na entrega</strong>
+                                <small>Combine com a nossa equipa</small>
+                            </span>
+
+                        </label>
 
                     </div>
 
 
                     <div class="form-group">
 
-                        <label for="deliveryArea">
-                            Zona / Bairro
-                        </label>
-
-                        <input
-                            type="text"
-                            id="deliveryArea"
-                            placeholder="Ex.: Matola, Baixa, Costa do Sol...">
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="deliveryFee">
-                            Taxa de entrega
-                        </label>
-
-                        <select id="deliveryFee">
-
-                            <option value="0">
-                                A combinar
-                            </option>
-
-                            <option value="100">
-                                100 MT
-                            </option>
-
-                            <option value="150">
-                                150 MT
-                            </option>
-
-                            <option value="200">
-                                200 MT
-                            </option>
-
-                            <option value="250">
-                                250 MT
-                            </option>
-
-                            <option value="300">
-                                300 MT
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </section>
-
-
-                <!-- PAGAMENTO -->
-
-                <section class="form-section">
-
-                    <h2>
-                        Pagamento
-                    </h2>
-
-
-                    <div class="payment-option">
-
-                        <label>
-
-                            <input
-                                type="radio"
-                                name="payment"
-                                value="mpesa"
-                                required>
-
-                            M-Pesa
-
-                        </label>
-
-                    </div>
-
-
-                    <div class="payment-option">
-
-                        <label>
-
-                            <input
-                                type="radio"
-                                name="payment"
-                                value="emola">
-
-                            e-Mola
-
-                        </label>
-
-                    </div>
-
-
-                    <div class="payment-option">
-
-                        <label>
-
-                            <input
-                                type="radio"
-                                name="payment"
-                                value="cash">
-
-                            Pagamento na entrega
-
-                        </label>
-
-                    </div>
-
-
-                    <div class="payment-note">
-
-                        O método de pagamento será confirmado
-                        durante o contacto para finalizar a encomenda.
-
-                        Por enquanto, o pagamento é processado
-                        manualmente.
-
-                    </div>
-
-                </section>
-
-
-                <!-- OBSERVAÇÕES -->
-
-                <section class="form-section">
-
-                    <h2>
-                        Observações
-                    </h2>
-
-
-                    <div class="form-group">
-
-                        <label for="notes">
-                            Observações adicionais
+                        <label for="observacoes">
+                            Observações
                         </label>
 
                         <textarea
-                            id="notes"
-                            placeholder="Alguma informação adicional sobre a entrega?"></textarea>
+                            id="observacoes"
+                            name="observacoes"
+                            rows="3"
+                            placeholder="Alguma informação adicional?"
+                        ></textarea>
 
                     </div>
 
-                </section>
 
+                    <button
+                        type="submit"
+                        class="checkout-submit"
+                    >
+                        ENVIAR PEDIDO PELO WHATSAPP
+                    </button>
 
-                <button
-                    type="submit"
-                    class="whatsapp-order-btn">
+                </form>
 
-                    ENVIAR PEDIDO PELO WHATSAPP
-
-                </button>
-
-            </form>
+            </section>
 
 
             <!-- RESUMO -->
 
             <aside class="checkout-summary">
 
-                <h2>
-                    Resumo do pedido
-                </h2>
-
-
-                <div id="checkoutProducts">
+                <div class="summary-header">
+                    <span>RESUMO</span>
+                    <h2>O seu pedido</h2>
                 </div>
 
 
-                <div class="checkout-row">
+                <div id="checkoutItems" class="checkout-items">
+                    <!-- Produtos inseridos pelo JavaScript -->
+                </div>
 
-                    <span>
-                        Subtotal
-                    </span>
 
-                    <span id="checkoutSubtotal">
+                <div class="summary-line">
+
+                    <span>Subtotal</span>
+
+                    <strong id="checkoutSubtotal">
                         0 MT
-                    </span>
+                    </strong>
 
                 </div>
 
 
-                <div class="checkout-row">
+                <div class="summary-line">
 
-                    <span>
-                        Entrega
-                    </span>
+                    <span>Taxa de entrega</span>
 
-                    <span id="checkoutDelivery">
-                        A combinar
-                    </span>
+                    <strong>
+                        50 MT
+                    </strong>
 
                 </div>
 
 
-                <div class="checkout-total">
+                <div class="summary-divider"></div>
 
-                    <span>
-                        Total
-                    </span>
 
-                    <span id="checkoutTotal">
-                        0 MT
-                    </span>
+                <div class="summary-total">
+
+                    <span>Total</span>
+
+                    <strong id="checkoutTotal">
+                        50 MT
+                    </strong>
 
                 </div>
 
 
-                <p class="checkout-warning">
+                <div class="secure-note">
 
-                    Ao enviar, o pedido será preparado
-                    através do WhatsApp para confirmação.
+                    <strong>Compra simples e transparente</strong>
 
-                    O envio da encomenda só será confirmado
-                    após a validação do pedido.
+                    <p>
+                        Depois de enviar o pedido, a nossa equipa
+                        entrará em contacto consigo pelo WhatsApp
+                        para confirmar os detalhes.
+                    </p>
 
-                </p>
+                </div>
 
             </aside>
 
@@ -452,19 +354,23 @@
 
 <footer class="site-footer">
 
-    <div class="footer-container">
+    <div class="container footer-inner">
 
         <div>
+            <strong>TOQUE INVENCÍVEL</strong>
+            <p>Beleza é cuidado. Cuidado é poder.</p>
+        </div>
 
-            <h3>
-                Toque Invencível
-            </h3>
+        <div>
+            <strong>Ajuda</strong>
 
-            <p>
-                Beleza é cuidado.
-                Cuidado é poder.
-            </p>
+            <a href="contacto.html">
+                Contacto
+            </a>
 
+            <a href="carrinho.html">
+                Voltar ao carrinho
+            </a>
         </div>
 
     </div>
@@ -477,412 +383,222 @@
 
 <script>
 
-/* =========================================
-   CONFIGURAÇÃO
-========================================= */
+const WHATSAPP_NUMBER = "258856948492";
 
-/*
-   IMPORTANTE:
-   Substituir pelo número oficial da
-   Toque Invencível antes do lançamento.
-*/
+const DELIVERY_FEE = 50;
 
-const WHATSAPP_NUMBER =
-    "258840000000";
+const cartKey = "toqueInvencivelCart";
 
-
-const CART_KEY =
-    "toqueInvencivelCart";
-
-
-/* =========================================
-   CARRINHO
-========================================= */
 
 function getCart() {
 
     return JSON.parse(
-        localStorage.getItem(CART_KEY)
-    ) || [];
-
-}
-
-
-const cart =
-    getCart();
-
-
-const checkoutContent =
-    document.getElementById(
-        "checkoutContent"
+        localStorage.getItem(cartKey) || "[]"
     );
 
-
-const emptyCheckout =
-    document.getElementById(
-        "emptyCheckout"
-    );
-
-
-/* =========================================
-   CARRINHO VAZIO
-========================================= */
-
-if (cart.length === 0) {
-
-    checkoutContent.style.display =
-        "none";
-
-    emptyCheckout.style.display =
-        "block";
-
 }
 
 
-/* =========================================
-   FORMATAR PREÇO
-========================================= */
+function renderCheckout() {
 
-function formatPrice(value) {
+    const cart = getCart();
 
-    return Number(value).toLocaleString(
-        "pt-MZ"
-    ) + " MT";
+    const itemsContainer =
+        document.getElementById("checkoutItems");
 
-}
+    const subtotalElement =
+        document.getElementById("checkoutSubtotal");
 
+    const totalElement =
+        document.getElementById("checkoutTotal");
 
-/* =========================================
-   CONTADOR
-========================================= */
+    if (!cart.length) {
 
-function updateCartCount() {
+        itemsContainer.innerHTML = `
+            <div class="empty-checkout">
+                <strong>O carrinho está vazio.</strong>
 
-    const total =
-        cart.reduce(
-            (sum, item) =>
-                sum + Number(item.quantity),
-            0
-        );
+                <a href="loja.html">
+                    Voltar à loja
+                </a>
+            </div>
+        `;
 
+        subtotalElement.textContent = "0 MT";
 
-    document.getElementById(
-        "cartCount"
-    ).textContent = total;
+        totalElement.textContent =
+            DELIVERY_FEE + " MT";
 
-}
+        return;
 
-
-updateCartCount();
-
-
-/* =========================================
-   MOSTRAR PRODUTOS
-========================================= */
-
-function renderCheckoutProducts() {
-
-    const container =
-        document.getElementById(
-            "checkoutProducts"
-        );
+    }
 
 
     let subtotal = 0;
 
 
-    container.innerHTML = "";
-
-
-    cart.forEach(product => {
+    itemsContainer.innerHTML = cart.map(item => {
 
         const itemTotal =
-            Number(product.price) *
-            Number(product.quantity);
-
+            Number(item.price || 0) *
+            Number(item.quantity || 1);
 
         subtotal += itemTotal;
 
 
-        const productElement =
-            document.createElement("div");
+        return `
+            <div class="checkout-item">
 
+                <div class="checkout-item-info">
 
-        productElement.className =
-            "checkout-product";
+                    <strong>
+                        ${item.name}
+                    </strong>
 
+                    <span>
+                        ${item.quantity} × ${item.price} MT
+                    </span>
 
-        productElement.innerHTML = `
+                </div>
 
-            <span class="checkout-product-name">
+                <strong>
+                    ${itemTotal} MT
+                </strong>
 
-                ${product.name}
-
-                × ${product.quantity}
-
-            </span>
-
-            <strong>
-
-                ${formatPrice(itemTotal)}
-
-            </strong>
-
+            </div>
         `;
 
-
-        container.appendChild(
-            productElement
-        );
-
-    });
+    }).join("");
 
 
-    document.getElementById(
-        "checkoutSubtotal"
-    ).textContent =
-        formatPrice(subtotal);
+    const total =
+        subtotal + DELIVERY_FEE;
 
 
-    updateTotal(subtotal);
+    subtotalElement.textContent =
+        subtotal + " MT";
+
+    totalElement.textContent =
+        total + " MT";
 
 }
 
 
-renderCheckoutProducts();
-
-
-/* =========================================
-   ENTREGA + TOTAL
-========================================= */
-
-function updateTotal(subtotal) {
-
-    const deliveryValue =
-        Number(
-            document.getElementById(
-                "deliveryFee"
-            ).value
-        );
-
-
-    const deliveryElement =
-        document.getElementById(
-            "checkoutDelivery"
-        );
-
-
-    if (deliveryValue === 0) {
-
-        deliveryElement.textContent =
-            "A combinar";
-
-    } else {
-
-        deliveryElement.textContent =
-            formatPrice(deliveryValue);
-
-    }
-
-
-    document.getElementById(
-        "checkoutTotal"
-    ).textContent =
-        formatPrice(
-            subtotal + deliveryValue
-        );
-
-}
-
-
-document.getElementById(
-    "deliveryFee"
-).addEventListener(
-    "change",
-    () => {
-
-        let subtotal = 0;
-
-
-        cart.forEach(product => {
-
-            subtotal +=
-                Number(product.price) *
-                Number(product.quantity);
-
-        });
-
-
-        updateTotal(subtotal);
-
-    }
-);
-
-
-/* =========================================
-   ENVIAR PEDIDO
-========================================= */
-
-document.getElementById(
-    "checkoutForm"
-).addEventListener(
-    "submit",
-    function(event) {
+document
+    .getElementById("checkoutForm")
+    .addEventListener("submit", function(event) {
 
         event.preventDefault();
 
 
-        const name =
-            document.getElementById(
-                "name"
-            ).value.trim();
+        const cart = getCart();
 
 
-        const phone =
-            document.getElementById(
-                "phone"
-            ).value.trim();
+        if (!cart.length) {
 
-
-        const city =
-            document.getElementById(
-                "city"
-            ).value.trim();
-
-
-        const address =
-            document.getElementById(
-                "address"
-            ).value.trim();
-
-
-        const area =
-            document.getElementById(
-                "deliveryArea"
-            ).value.trim();
-
-
-        const deliveryFee =
-            Number(
-                document.getElementById(
-                    "deliveryFee"
-                ).value
+            alert(
+                "O seu carrinho está vazio."
             );
 
+            return;
 
-        const payment =
+        }
+
+
+        const nome =
+            document.getElementById("nome").value.trim();
+
+        const telefone =
+            document.getElementById("telefone").value.trim();
+
+        const cidade =
+            document.getElementById("cidade").value.trim();
+
+        const bairro =
+            document.getElementById("bairro").value.trim();
+
+        const endereco =
+            document.getElementById("endereco").value.trim();
+
+        const observacoes =
+            document.getElementById("observacoes").value.trim();
+
+
+        const pagamento =
             document.querySelector(
-                'input[name="payment"]:checked'
-            );
-
-
-        const notes =
-            document.getElementById(
-                "notes"
-            ).value.trim();
+                'input[name="pagamento"]:checked'
+            ).value;
 
 
         let subtotal = 0;
 
 
-        let productsText = "";
+        const produtos = cart.map(item => {
+
+            const quantidade =
+                Number(item.quantity || 1);
+
+            const preco =
+                Number(item.price || 0);
+
+            const totalProduto =
+                quantidade * preco;
+
+            subtotal += totalProduto;
 
 
-        cart.forEach(product => {
+            return `• ${item.name} — ${quantidade}x — ${totalProduto} MT`;
 
-            const itemTotal =
-                Number(product.price) *
-                Number(product.quantity);
-
-
-            subtotal += itemTotal;
-
-
-            productsText +=
-                `• ${product.name} x${product.quantity} — ${formatPrice(itemTotal)}\n`;
-
-        });
+        }).join("\n");
 
 
         const total =
-            subtotal + deliveryFee;
+            subtotal + DELIVERY_FEE;
 
 
-        let deliveryText =
-            deliveryFee === 0
-                ? "A combinar"
-                : formatPrice(deliveryFee);
+        const mensagem =
 
+`Olá, Toque Invencível! 👋
 
-        const paymentNames = {
+Gostaria de fazer este pedido:
 
-            mpesa: "M-Pesa",
+${produtos}
 
-            emola: "e-Mola",
+━━━━━━━━━━━━━━
 
-            cash: "Pagamento na entrega"
+Subtotal: ${subtotal} MT
+Taxa de entrega: ${DELIVERY_FEE} MT
+TOTAL: ${total} MT
 
-        };
+👤 Nome: ${nome}
+📱 WhatsApp: ${telefone}
+📍 Cidade: ${cidade}
+📍 Bairro: ${bairro}
+🏠 Endereço: ${endereco}
 
+💳 Pagamento: ${pagamento}
 
-        const paymentText =
-            paymentNames[
-                payment.value
-            ] || payment.value;
+📝 Observações:
+${observacoes || "Nenhuma"}
 
+Aguardo a confirmação do meu pedido.`;
 
-        const message =
-
-`✨ *NOVO PEDIDO — TOQUE INVENCÍVEL*
-
-👤 *Cliente:*
-${name}
-
-📱 *Telefone:*
-${phone}
-
-📍 *Entrega:*
-${city}
-${area}
-${address}
-
-🛍️ *Produtos:*
-${productsText}
-
-💰 *Subtotal:*
-${formatPrice(subtotal)}
-
-🚚 *Entrega:*
-${deliveryText}
-
-💳 *Pagamento:*
-${paymentText}
-
-💵 *TOTAL:*
-${formatPrice(total)}
-
-📝 *Observações:*
-${notes || "Nenhuma"}
-
-Por favor, confirme a disponibilidade e os detalhes da encomenda.`;
-
-
-        const whatsappURL =
+        
+        const url =
             "https://wa.me/" +
             WHATSAPP_NUMBER +
             "?text=" +
-            encodeURIComponent(message);
+            encodeURIComponent(mensagem);
 
 
-        window.open(
-            whatsappURL,
-            "_blank"
-        );
+        window.open(url, "_blank");
 
-    });
+});
+
+
+renderCheckout();
 
 </script>
 
 </body>
-
-  </html>
+</html>
