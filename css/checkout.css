@@ -1,18 +1,13 @@
 /* =========================================
-   CHECKOUT — TOQUE INVENCÍVEL
-   Preto + Dourado + Branco
+   TOQUE INVENCÍVEL — CHECKOUT
 ========================================= */
 
 .checkout-page {
-    background: #f7f7f7;
+    background: #f4eee2 !important;
     min-height: 100vh;
-    padding: 70px 20px 90px;
+    padding: 60px 20px 90px;
+    color: #111111 !important;
 }
-
-
-/* =========================================
-   CONTAINER
-========================================= */
 
 .checkout-container {
     width: 100%;
@@ -20,19 +15,16 @@
     margin: 0 auto;
 }
 
-
-/* =========================================
-   TÍTULO
-========================================= */
+/* TÍTULO */
 
 .checkout-heading {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .checkout-heading > span {
-    display: inline-block;
-    color: #a67c20;
+    display: block;
+    color: #9b7420 !important;
     font-size: 13px;
     font-weight: 800;
     letter-spacing: 2px;
@@ -40,66 +32,62 @@
 }
 
 .checkout-heading h1 {
-    color: #111111;
+    color: #111111 !important;
     font-family: "Playfair Display", serif;
     font-size: 42px;
     line-height: 1.2;
-    margin: 0 0 14px;
+    margin: 0 0 12px;
 }
 
 .checkout-heading p {
-    color: #444444;
+    color: #222222 !important;
     font-size: 16px;
     line-height: 1.6;
-    margin: 0;
 }
 
 
-/* =========================================
-   GRID
-========================================= */
+/* GRID */
 
 .checkout-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.8fr);
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, .8fr);
     gap: 30px;
     align-items: start;
 }
 
 
-/* =========================================
-   CARDS
-========================================= */
+/* CARDS */
 
 .checkout-card,
 .checkout-summary {
-    background: #ffffff;
-    border: 1px solid #dddddd;
+    background: #ffffff !important;
+    color: #111111 !important;
+
+    border: 1px solid #d8d0c2;
     border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .10);
 }
 
 
-/* =========================================
-   FORM CARD
-========================================= */
+/* FORM */
 
 .checkout-card {
     padding: 35px;
 }
 
 
-/* =========================================
-   TÍTULOS DAS SECÇÕES
-========================================= */
+/* TÍTULOS */
 
 .card-title {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding-bottom: 25px;
+    gap: 15px;
+
+    padding-bottom: 22px;
     margin-bottom: 25px;
-    border-bottom: 1px solid #e4e4e4;
+
+    border-bottom: 1px solid #dedede;
 }
 
 .title-number {
@@ -111,35 +99,29 @@
     align-items: center;
     justify-content: center;
 
-    background: #111111;
-    color: #d6b15c;
-
     border-radius: 50%;
+
+    background: #111111 !important;
+    color: #d4ad55 !important;
 
     font-size: 13px;
     font-weight: 800;
 }
 
 .card-title h2 {
-    color: #111111;
+    color: #111111 !important;
     font-size: 21px;
     margin: 0 0 5px;
 }
 
 .card-title p {
-    color: #555555;
+    color: #444444 !important;
     font-size: 14px;
     margin: 0;
 }
 
-.payment-title {
-    margin-top: 35px;
-}
 
-
-/* =========================================
-   FORMULÁRIO
-========================================= */
+/* CAMPOS */
 
 .form-group {
     margin-bottom: 20px;
@@ -148,7 +130,7 @@
 .form-group label {
     display: block;
 
-    color: #111111;
+    color: #111111 !important;
 
     font-size: 14px;
     font-weight: 700;
@@ -161,11 +143,10 @@
     width: 100%;
     box-sizing: border-box;
 
-    background: #ffffff;
+    background: #ffffff !important;
+    color: #111111 !important;
 
-    color: #111111;
-
-    border: 1px solid #bdbdbd;
+    border: 1px solid #aaa !important;
     border-radius: 8px;
 
     padding: 14px 15px;
@@ -174,10 +155,6 @@
     font-size: 15px;
 
     outline: none;
-
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
 }
 
 .form-group input {
@@ -185,21 +162,21 @@
 }
 
 .form-group textarea {
-    resize: vertical;
     min-height: 100px;
+    resize: vertical;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #777777;
+    color: #666666 !important;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #a67c20;
+    border-color: #a67c20 !important;
 
     box-shadow:
-        0 0 0 3px rgba(166, 124, 32, 0.15);
+        0 0 0 3px rgba(166, 124, 32, .15);
 }
 
 .form-row {
@@ -209,9 +186,7 @@
 }
 
 
-/* =========================================
-   TAXA DE ENTREGA
-========================================= */
+/* ENTREGA */
 
 .delivery-box {
     display: flex;
@@ -220,12 +195,9 @@
 
     padding: 18px;
 
-    background: #111111;
+    background: #111111 !important;
 
-    border: 1px solid #252525;
     border-radius: 10px;
-
-    color: #ffffff;
 
     margin: 10px 0 35px;
 }
@@ -239,35 +211,29 @@
     align-items: center;
     justify-content: center;
 
-    background: #d6b15c;
-    border-radius: 50%;
+    background: #d4ad55 !important;
 
-    font-size: 20px;
+    border-radius: 50%;
 }
 
 .delivery-box strong {
-    color: #ffffff;
-    font-size: 15px;
+    color: #ffffff !important;
 }
 
 .delivery-box p {
-    color: #dddddd;
+    color: #eeeeee !important;
     font-size: 13px;
-    line-height: 1.4;
-    margin: 4px 0 0;
+    margin: 5px 0 0;
 }
 
 .delivery-price {
     margin-left: auto;
-    color: #d6b15c !important;
+    color: #d4ad55 !important;
     font-size: 17px !important;
-    white-space: nowrap;
 }
 
 
-/* =========================================
-   PAGAMENTO
-========================================= */
+/* PAGAMENTO */
 
 .payment-options {
     display: grid;
@@ -282,27 +248,23 @@
 
     padding: 16px;
 
-    background: #ffffff;
+    background: #ffffff !important;
+    color: #111111 !important;
 
-    border: 1px solid #cfcfcf;
+    border: 1px solid #c5c5c5 !important;
     border-radius: 9px;
 
     cursor: pointer;
-
-    transition:
-        border-color 0.2s ease,
-        background 0.2s ease;
 }
 
 .payment-option:hover {
-    border-color: #a67c20;
-    background: #fffdf7;
+    border-color: #a67c20 !important;
+    background: #fffaf0 !important;
 }
 
 .payment-option input {
     width: 18px;
     height: 18px;
-
     accent-color: #a67c20;
 }
 
@@ -313,93 +275,82 @@
 }
 
 .payment-content strong {
-    color: #111111;
-    font-size: 15px;
+    color: #111111 !important;
 }
 
 .payment-content small {
-    color: #555555;
-    font-size: 12px;
+    color: #555555 !important;
 }
 
 
-/* =========================================
-   BOTÃO
-========================================= */
+/* BOTÃO PRINCIPAL */
 
 .checkout-submit {
-    width: 100%;
+    width: 100% !important;
 
-    padding: 17px 20px;
+    padding: 17px 20px !important;
 
-    background: #111111;
-    color: #ffffff;
+    background: #111111 !important;
+    color: #ffffff !important;
 
-    border: 2px solid #111111;
-    border-radius: 8px;
+    border: 2px solid #111111 !important;
+    border-radius: 8px !important;
 
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-
-    letter-spacing: 0.5px;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
 
     cursor: pointer;
 
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .checkout-submit:hover {
-    background: #d6b15c;
-    border-color: #d6b15c;
-    color: #111111;
+    background: #d4ad55 !important;
+    color: #111111 !important;
+    border-color: #d4ad55 !important;
 }
 
 
 /* =========================================
-   RESUMO
+   RESUMO DO PEDIDO
 ========================================= */
 
 .checkout-summary {
     padding: 30px;
-
-    position: sticky;
-    top: 20px;
 }
 
+
+/* CABEÇALHO DO RESUMO */
+
 .summary-header {
-    padding-bottom: 22px;
+    padding-bottom: 20px;
     margin-bottom: 20px;
 
     border-bottom: 1px solid #dddddd;
 }
 
 .summary-header span {
-    color: #a67c20;
+    color: #9b7420 !important;
 
     font-size: 12px;
     font-weight: 800;
-
     letter-spacing: 2px;
 }
 
 .summary-header h2 {
-    color: #111111;
+    color: #111111 !important;
 
     font-family: "Playfair Display", serif;
 
-    font-size: 28px;
+    font-size: 30px;
 
-    margin: 6px 0 0;
+    margin: 7px 0 0;
 }
 
 
-/* =========================================
-   ITENS
-========================================= */
+/* PRODUTOS */
 
 .checkout-items {
     display: flex;
@@ -416,7 +367,7 @@
 
     padding-bottom: 14px;
 
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .checkout-item-info {
@@ -425,25 +376,23 @@
     gap: 5px;
 }
 
-.checkout-item-info strong,
-.checkout-item > strong {
-    color: #111111;
-    font-size: 14px;
+.checkout-item-info strong {
+    color: #111111 !important;
+    font-size: 15px;
 }
 
 .checkout-item-info span {
-    color: #666666;
+    color: #555555 !important;
     font-size: 13px;
 }
 
 .checkout-item > strong {
-    white-space: nowrap;
+    color: #111111 !important;
+    font-size: 15px;
 }
 
 
-/* =========================================
-   LINHAS DO RESUMO
-========================================= */
+/* VALORES */
 
 .summary-line {
     display: flex;
@@ -453,20 +402,23 @@
 }
 
 .summary-line span {
-    color: #555555;
+    color: #333333 !important;
     font-size: 14px;
 }
 
 .summary-line strong {
-    color: #111111;
+    color: #111111 !important;
     font-size: 14px;
 }
 
 .summary-divider {
     height: 1px;
-    background: #cccccc;
+    background: #cfcfcf;
     margin: 12px 0;
 }
+
+
+/* TOTAL */
 
 .summary-total {
     display: flex;
@@ -477,48 +429,43 @@
 }
 
 .summary-total span {
-    color: #111111;
+    color: #111111 !important;
     font-size: 18px;
     font-weight: 800;
 }
 
 .summary-total strong {
-    color: #a67c20;
-    font-size: 24px;
+    color: #9b7420 !important;
+    font-size: 25px;
     font-weight: 800;
 }
 
 
-/* =========================================
-   AVISO
-========================================= */
+/* AVISO */
 
 .secure-note {
     margin-top: 25px;
     padding: 18px;
 
-    background: #111111;
+    background: #111111 !important;
 
     border-radius: 9px;
 }
 
 .secure-note strong {
-    color: #d6b15c;
+    color: #d4ad55 !important;
     font-size: 14px;
 }
 
 .secure-note p {
-    color: #eeeeee;
-    font-size: 12px;
+    color: #eeeeee !important;
+    font-size: 13px;
     line-height: 1.6;
-
     margin: 8px 0 0;
 }
 
 
-/* =========================================
-   CARRINHO VAZIO
-========================================= */
+/* CARRINHO VAZIO */
 
 .empty-checkout {
     padding: 20px 0;
@@ -529,27 +476,21 @@
 }
 
 .empty-checkout strong {
-    color: #111111;
+    color: #111111 !important;
 }
 
 .empty-checkout a {
-    color: #a67c20;
+    color: #9b7420 !important;
     font-weight: 700;
 }
 
 
-/* =========================================
-   RESPONSIVO
-========================================= */
+/* MOBILE */
 
 @media (max-width: 900px) {
 
     .checkout-grid {
         grid-template-columns: 1fr;
-    }
-
-    .checkout-summary {
-        position: static;
     }
 
 }
@@ -559,10 +500,6 @@
 
     .checkout-page {
         padding: 45px 15px 60px;
-    }
-
-    .checkout-heading {
-        margin-bottom: 35px;
     }
 
     .checkout-heading h1 {
@@ -587,8 +524,8 @@
         margin-left: auto;
     }
 
-    .card-title h2 {
-        font-size: 18px;
+    .checkout-submit {
+        font-size: 13px !important;
     }
 
 }
