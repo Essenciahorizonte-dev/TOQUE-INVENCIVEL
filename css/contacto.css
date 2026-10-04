@@ -1,382 +1,415 @@
-/* =====================================================
-   TOQUE INVENCÍVEL
-   PÁGINA CONTACTO
-   ===================================================== */
+/* =========================================
+   CONTACTO — TOQUE INVENCÍVEL
+   Creme + Branco + Preto + Dourado
+========================================= */
 
-
-/* ================= HERO ================= */
-
-.contacto-hero {
-    background: #111111;
-
-    color: #ffffff;
-
-    padding: 90px 20px;
-
-    text-align: center;
+.contacto-page {
+    background: #f4eee2 !important;
+    min-height: 100vh;
+    color: #111111 !important;
 }
 
-.contacto-hero .container {
-    max-width: 850px;
 
-    margin: 0 auto;
+/* =========================================
+   HERO
+========================================= */
+
+.contacto-hero {
+    text-align: center;
+
+    padding: 75px 20px 65px;
+
+    background: #f4eee2 !important;
+}
+
+.section-label {
+    display: block;
+
+    color: #9b7420 !important;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 12px;
 }
 
 .contacto-hero h1 {
-    margin: 0 auto 20px;
+    color: #111111 !important;
 
     font-family: "Playfair Display", serif;
 
-    color: #f4eee2;
-
-    font-size: clamp(2.3rem, 5vw, 4rem);
-
+    font-size: 48px;
     line-height: 1.15;
+
+    margin: 0 0 20px;
+}
+
+.contacto-hero h1 span {
+    color: #a67c20 !important;
 }
 
 .contacto-hero p {
-    max-width: 680px;
+    max-width: 650px;
 
     margin: 0 auto;
 
-    color: #eeeeee;
+    color: #333333 !important;
 
-    font-size: 1.08rem;
-
-    line-height: 1.8;
-}
-
-
-/* ================= CONTACTOS ================= */
-
-.contacto-section {
-    padding: 90px 20px;
-
-    background: #f4eee2;
-}
-
-.section-heading {
-    max-width: 750px;
-
-    margin: 0 auto 50px;
-
-    text-align: center;
-}
-
-.section-heading h2 {
-    margin: 0 0 15px;
-
-    font-family: "Playfair Display", serif;
-
-    color: #111111;
-
-    font-size: clamp(2rem, 4vw, 3rem);
-
-    line-height: 1.2;
-}
-
-.section-heading p {
-    margin: 0;
-
-    color: #333333;
-
-    font-size: 1rem;
-
+    font-size: 16px;
     line-height: 1.7;
 }
 
 
-/* ================= GRID ================= */
+/* =========================================
+   CONTAINER
+========================================= */
 
-.contactos-grid {
-    max-width: 1000px;
+.contacto-container {
+    width: 100%;
+    max-width: 1100px;
 
     margin: 0 auto;
 
+    padding: 0 20px 80px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.contacto-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
 
-    gap: 30px;
+    gap: 25px;
 }
-
-
-/* ================= CARD ================= */
 
 .contacto-card {
-    padding: 40px;
+    display: flex;
 
-    background: #ffffff;
+    gap: 20px;
 
-    border: 1px solid #ddd7ca;
+    padding: 30px;
 
-    border-radius: 18px;
+    background: #ffffff !important;
+
+    border: 1px solid #ddd5c7;
+
+    border-radius: 14px;
 
     box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.08);
+        0 8px 30px rgba(0, 0, 0, .08);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
 }
 
-.contacto-whatsapp {
-    border: 2px solid #a9812f;
+.contacto-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, .12);
 }
+
+
+/* =========================================
+   ÍCONES
+========================================= */
 
 .contacto-icon {
-    width: 65px;
-    height: 65px;
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 25px;
+    background: #111111 !important;
+
+    color: #d4ad55 !important;
 
     border-radius: 50%;
 
-    background: #111111;
-
-    color: #a9812f;
-
-    font-size: 1.7rem;
-
+    font-size: 20px;
     font-weight: 800;
 }
 
-.contacto-label {
+.facebook-icon {
+    background: #d4ad55 !important;
+    color: #111111 !important;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.contacto-content {
+    flex: 1;
+}
+
+.card-label {
     display: block;
 
-    margin-bottom: 10px;
+    color: #9b7420 !important;
 
-    color: #8a6a20;
-
-    font-size: 0.78rem;
+    font-size: 11px;
 
     font-weight: 800;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
 }
 
-.contacto-card h3 {
-    margin: 0 0 15px;
+.contacto-content h2 {
+    color: #111111 !important;
 
     font-family: "Playfair Display", serif;
 
-    color: #111111;
+    font-size: 25px;
 
-    font-size: 2rem;
+    line-height: 1.25;
+
+    margin: 0 0 12px;
 }
 
-.contacto-card p {
+.contacto-content p {
+    color: #444444 !important;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
     margin: 0 0 22px;
-
-    color: #333333;
-
-    font-size: 1rem;
-
-    line-height: 1.75;
-}
-
-.contacto-numero {
-    margin-bottom: 25px;
-
-    color: #111111;
-
-    font-size: 1.05rem;
-
-    font-weight: 700;
 }
 
 
-/* ================= BOTÕES ================= */
+/* =========================================
+   BOTÕES
+========================================= */
 
 .contacto-button {
-    display: flex;
+    display: inline-flex;
 
     align-items: center;
     justify-content: center;
 
-    width: 100%;
+    min-height: 46px;
 
-    min-height: 52px;
+    padding: 0 20px;
 
-    padding: 13px 20px;
-
-    border-radius: 8px;
-
-    background: #111111;
-
-    color: #ffffff;
+    border-radius: 7px;
 
     text-decoration: none;
 
-    font-size: 0.95rem;
+    font-size: 13px;
 
-    font-weight: 700;
+    font-weight: 800;
 
     transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
 }
 
-.contacto-button:hover {
-    transform: translateY(-2px);
+.contacto-button-primary {
+    background: #111111 !important;
 
-    opacity: 0.9;
+    color: #ffffff !important;
+
+    border: 2px solid #111111 !important;
+}
+
+.contacto-button-primary:hover {
+    background: #d4ad55 !important;
+
+    color: #111111 !important;
+
+    border-color: #d4ad55 !important;
 }
 
 .contacto-button-secondary {
-    background: #a9812f;
+    background: #ffffff !important;
 
-    color: #111111;
+    color: #111111 !important;
+
+    border: 2px solid #111111 !important;
+}
+
+.contacto-button-secondary:hover {
+    background: #111111 !important;
+
+    color: #ffffff !important;
 }
 
 
-/* ================= AJUDA ================= */
+/* =========================================
+   AJUDA
+========================================= */
 
-.contacto-ajuda {
-    padding: 80px 20px;
-
-    background: #111111;
-}
-
-.ajuda-box {
-    max-width: 1000px;
-
-    margin: 0 auto;
-
-    padding: 50px;
-
+.contacto-help {
     display: flex;
 
     align-items: center;
 
-    justify-content: space-between;
+    gap: 20px;
 
-    gap: 40px;
+    margin-top: 30px;
 
-    border: 1px solid #3b3b3b;
+    padding: 28px 30px;
 
-    border-radius: 18px;
+    background: #111111 !important;
 
-    background: #181818;
+    border-radius: 14px;
+
+    color: #ffffff !important;
 }
 
-.ajuda-box h2 {
-    max-width: 650px;
+.help-number {
+    width: 48px;
+    height: 48px;
 
-    margin: 0 0 15px;
-
-    font-family: "Playfair Display", serif;
-
-    color: #f4eee2;
-
-    font-size: clamp(1.8rem, 4vw, 2.7rem);
-
-    line-height: 1.2;
-}
-
-.ajuda-box p {
-    max-width: 650px;
-
-    margin: 0;
-
-    color: #eeeeee;
-
-    font-size: 1rem;
-
-    line-height: 1.7;
-}
-
-.ajuda-button {
-    flex-shrink: 0;
+    min-width: 48px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    min-width: 190px;
+    border-radius: 50%;
 
-    min-height: 52px;
+    background: #d4ad55 !important;
 
-    padding: 13px 22px;
-
-    border-radius: 8px;
-
-    background: #a9812f;
-
-    color: #111111;
-
-    text-decoration: none;
+    color: #111111 !important;
 
     font-weight: 800;
 }
 
+.contacto-help h2 {
+    color: #ffffff !important;
 
-/* ================= TABLET ================= */
+    font-size: 19px;
 
-@media (max-width: 800px) {
+    margin: 0 0 7px;
+}
 
-    .contactos-grid {
+.contacto-help p {
+    color: #eeeeee !important;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   FRASE FINAL
+========================================= */
+
+.contacto-final {
+    text-align: center;
+
+    padding: 75px 20px 20px;
+}
+
+.contacto-final span {
+    color: #9b7420 !important;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+}
+
+.contacto-final h2 {
+    color: #111111 !important;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+
+    line-height: 1.3;
+
+    margin: 12px 0 0;
+}
+
+.contacto-final strong {
+    color: #a67c20 !important;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 750px) {
+
+    .contacto-hero {
+        padding: 55px 20px 45px;
+    }
+
+    .contacto-hero h1 {
+        font-size: 37px;
+    }
+
+    .contacto-grid {
         grid-template-columns: 1fr;
     }
 
-    .ajuda-box {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-    .ajuda-button {
-        width: 100%;
+    .contacto-card {
+        padding: 25px;
     }
 
 }
 
 
-/* ================= MOBILE ================= */
+@media (max-width: 480px) {
 
-@media (max-width: 600px) {
-
-    .contacto-hero {
-        padding: 70px 20px;
+    .contacto-container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .contacto-section {
-        padding: 65px 18px;
+    .contacto-hero h1 {
+        font-size: 32px;
     }
 
     .contacto-card {
-        padding: 30px 24px;
+        flex-direction: column;
     }
 
-    .contacto-card h3 {
-        font-size: 1.8rem;
+    .contacto-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
     }
 
-    .contacto-card p {
-        font-size: 1rem;
+    .contacto-content h2 {
+        font-size: 23px;
     }
 
-    .contacto-button {
-        min-height: 54px;
+    .contacto-help {
+        align-items: flex-start;
 
-        font-size: 1rem;
+        padding: 23px;
     }
 
-    .contacto-ajuda {
-        padding: 60px 18px;
-    }
-
-    .ajuda-box {
-        padding: 35px 25px;
-    }
-
-    .ajuda-button {
-        min-height: 54px;
-
-        width: 100%;
+    .contacto-final h2 {
+        font-size: 29px;
     }
 
 }
