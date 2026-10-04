@@ -6,18 +6,10 @@
 
     <title>Contacto | Toque Invencível</title>
 
-    <meta
-        name="description"
-        content="Entre em contacto com o Toque Invencível através do WhatsApp ou Facebook."
-    >
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contacto.css">
@@ -25,390 +17,286 @@
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+<header class="site-header">
 
-    <header class="site-header">
+    <div class="container header-inner">
 
-        <div class="container header-inner">
+        <a href="../index.html" class="logo">
+            <span class="logo-mark">TI</span>
 
-            <a href="../index.html" class="logo">
-                <span class="logo-mark">TI</span>
+            <span class="logo-text">
+                <strong>TOQUE INVENCÍVEL</strong>
+                <small>Beleza é cuidado. Cuidado é poder.</small>
+            </span>
+        </a>
 
-                <span class="logo-text">
-                    <strong>TOQUE INVENCÍVEL</strong>
-                    <small>Beleza é cuidado</small>
-                </span>
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+
+            <a href="../index.html">Início</a>
+            <a href="loja.html">Loja</a>
+            <a href="guias.html">Guias</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contacto.html">Contacto</a>
+
+            <a href="carrinho.html" class="cart-link">
+                Carrinho
+                <span id="cartCount">0</span>
             </a>
 
-            <button
-                class="menu-button"
-                id="menuButton"
-                aria-label="Abrir menu"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
+        </nav>
 
-            <nav class="main-nav" id="mainNav">
+    </div>
 
-                <a href="../index.html">
-                    Início
-                </a>
-
-                <a href="loja.html">
-                    Loja
-                </a>
-
-                <a href="guias.html">
-                    Guias
-                </a>
-
-                <a href="sobre.html">
-                    Sobre
-                </a>
-
-                <a href="contacto.html" class="active">
-                    Contacto
-                </a>
-
-                <a href="carrinho.html" class="cart-link">
-                    🛒 Carrinho
-                    <span class="cart-count" id="cartCount">0</span>
-                </a>
-
-            </nav>
-
-        </div>
-
-    </header>
+</header>
 
 
-    <!-- ================= CONTEÚDO ================= -->
+<main class="contacto-page">
 
-    <main>
+    <!-- HERO -->
 
-        <!-- HERO -->
+    <section class="contacto-hero">
 
-        <section class="contacto-hero">
+        <span class="section-label">
+            FALE CONNOSCO
+        </span>
 
-            <div class="container">
+        <h1>
+            Estamos aqui para<br>
+            <span>ajudar.</span>
+        </h1>
 
-                <span class="section-label">
-                    FALE CONNOSCO
-                </span>
+        <p>
+            Tem alguma dúvida sobre os nossos produtos,
+            pedidos ou entregas? Entre em contacto connosco.
+        </p>
 
-                <h1>
-                    Estamos aqui para ajudar.
-                </h1>
-
-                <p>
-                    Tem uma dúvida sobre um produto,
-                    uma encomenda ou precisa de alguma informação?
-                    Entre em contacto connosco.
-                </p>
-
-            </div>
-
-        </section>
+    </section>
 
 
-        <!-- CONTACTOS -->
+    <!-- CONTACTOS -->
 
-        <section class="contacto-section">
+    <section class="contacto-container">
 
-            <div class="container">
+        <div class="contacto-grid">
 
-                <div class="section-heading">
 
-                    <span class="section-label">
-                        OS NOSSOS CANAIS
+            <!-- WHATSAPP -->
+
+            <article class="contacto-card destaque">
+
+                <div class="contacto-icon">
+                    W
+                </div>
+
+                <div class="contacto-content">
+
+                    <span class="card-label">
+                        WHATSAPP
                     </span>
 
                     <h2>
-                        Escolha como quer falar connosco
+                        Fale directamente connosco
                     </h2>
 
                     <p>
-                        Atualmente, o Toque Invencível atende
-                        através do WhatsApp e Facebook.
+                        Para pedidos, dúvidas ou informações
+                        sobre os produtos, fale connosco pelo WhatsApp.
                     </p>
-
-                </div>
-
-
-                <div class="contactos-grid">
-
-
-                    <!-- WHATSAPP -->
-
-                    <article class="contacto-card contacto-whatsapp">
-
-                        <div class="contacto-icon">
-                            💬
-                        </div>
-
-                        <span class="contacto-label">
-                            PRINCIPAL CANAL
-                        </span>
-
-                        <h3>
-                            WhatsApp
-                        </h3>
-
-                        <p>
-                            Fale diretamente connosco para tirar
-                            dúvidas, fazer pedidos ou obter
-                            informações sobre os produtos.
-                        </p>
-
-                        <div class="contacto-numero">
-                            +258 856 948 492
-                        </div>
-
-                        <a
-                            href="https://wa.me/258856948492?text=Olá%20Toque%20Invencível!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos."
-                            class="contacto-button"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Falar pelo WhatsApp
-                        </a>
-
-                    </article>
-
-
-                    <!-- FACEBOOK -->
-
-                    <article class="contacto-card">
-
-                        <div class="contacto-icon">
-                            f
-                        </div>
-
-                        <span class="contacto-label">
-                            REDE SOCIAL
-                        </span>
-
-                        <h3>
-                            Facebook
-                        </h3>
-
-                        <p>
-                            Acompanhe o Toque Invencível no Facebook
-                            para novidades, conteúdos e atualizações.
-                        </p>
-
-                        <div class="contacto-numero">
-                            Facebook
-                        </div>
-
-                        <!--
-                            SUBSTITUIR O # PELO LINK REAL DA PÁGINA
-                            DO FACEBOOK QUANDO FOR INFORMADO.
-                        -->
-
-                        <a
-                            href="#"
-                            class="contacto-button contacto-button-secondary"
-                            onclick="alert('O link do Facebook será adicionado quando a página oficial for definida.'); return false;"
-                        >
-                            Visitar Facebook
-                        </a>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- DÚVIDAS -->
-
-        <section class="contacto-ajuda">
-
-            <div class="container">
-
-                <div class="ajuda-box">
-
-                    <div>
-
-                        <span class="section-label">
-                            PRECISA DE AJUDA?
-                        </span>
-
-                        <h2>
-                            Estamos a começar,
-                            mas queremos atender bem.
-                        </h2>
-
-                        <p>
-                            Na V1, o atendimento é feito diretamente
-                            através dos nossos canais de contacto.
-                            Isso permite responder às dúvidas e
-                            acompanhar os pedidos de forma próxima.
-                        </p>
-
-                    </div>
 
                     <a
-                        href="https://wa.me/258856948492?text=Olá%20Toque%20Invencível!"
-                        class="ajuda-button"
+                        href="https://wa.me/258856948492?text=Olá%20Toque%20Invencível!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos."
                         target="_blank"
                         rel="noopener noreferrer"
+                        class="contacto-button contacto-button-primary"
                     >
-                        Contactar agora
+                        Falar no WhatsApp
                     </a>
 
                 </div>
 
-            </div>
-
-        </section>
-
-    </main>
+            </article>
 
 
-    <!-- ================= FOOTER ================= -->
+            <!-- FACEBOOK -->
 
-    <footer class="site-footer">
+            <article class="contacto-card">
 
-        <div class="container">
+                <div class="contacto-icon facebook-icon">
+                    f
+                </div>
 
-            <div class="footer-grid">
+                <div class="contacto-content">
 
-                <div>
+                    <span class="card-label">
+                        FACEBOOK
+                    </span>
 
-                    <h3>
-                        TOQUE INVENCÍVEL
-                    </h3>
+                    <h2>
+                        Acompanhe a Toque Invencível
+                    </h2>
 
                     <p>
-                        Beleza é cuidado.
-                        Cuidado é poder.
+                        Visite a nossa página no Facebook
+                        para acompanhar as novidades da marca.
                     </p>
 
-                </div>
-
-
-                <div>
-
-                    <h4>
-                        Loja
-                    </h4>
-
-                    <a href="loja.html">
-                        Produtos
-                    </a>
-
-                    <a href="guias.html">
-                        Guias
-                    </a>
-
-                    <a href="carrinho.html">
-                        Carrinho
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61595159517383"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contacto-button contacto-button-secondary"
+                    >
+                        Visitar Facebook
                     </a>
 
                 </div>
 
+            </article>
 
-                <div>
 
-                    <h4>
-                        Ajuda
-                    </h4>
+        </div>
 
-                    <a href="sobre.html">
-                        Sobre nós
-                    </a>
 
-                    <a href="contacto.html">
-                        Contacto
-                    </a>
+        <!-- HORÁRIO / AJUDA -->
 
-                    <a href="acompanhar-pedido.html">
-                        Acompanhar pedido
-                    </a>
+        <section class="contacto-help">
 
-                </div>
-
+            <div class="help-number">
+                01
             </div>
 
+            <div>
 
-            <div class="footer-bottom">
+                <h2>
+                    Precisa de ajuda com um pedido?
+                </h2>
 
                 <p>
-                    © 2026 Toque Invencível.
-                    Todos os direitos reservados.
+                    Envie uma mensagem pelo WhatsApp com o seu
+                    nome e os detalhes do que precisa. A nossa
+                    equipa irá responder e orientar os próximos passos.
                 </p>
 
             </div>
 
+        </section>
+
+
+        <!-- FRASE FINAL -->
+
+        <section class="contacto-final">
+
+            <span>
+                TOQUE INVENCÍVEL
+            </span>
+
+            <h2>
+                Beleza é cuidado.<br>
+                <strong>Cuidado é poder.</strong>
+            </h2>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <strong>
+                TOQUE INVENCÍVEL
+            </strong>
+
+            <p>
+                Beleza é cuidado. Cuidado é poder.
+            </p>
+
         </div>
 
-    </footer>
+
+        <div>
+
+            <strong>
+                Ajuda
+            </strong>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+            <a href="carrinho.html">
+                Carrinho
+            </a>
+
+        </div>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+        <div>
 
-    <script src="../js/main.js"></script>
+            <strong>
+                Redes sociais
+            </strong>
 
-    <script>
+            <a
+                href="https://www.facebook.com/profile.php?id=61595159517383"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Facebook
+            </a>
 
-        /* Contador do carrinho */
+            <a
+                href="https://wa.me/258856948492"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp
+            </a>
 
-        const cartCount =
-            document.getElementById("cartCount");
+        </div>
 
-        const cart =
-            JSON.parse(
-                localStorage.getItem("toqueInvencivelCart")
-            ) || [];
+    </div>
 
-        let totalItems = 0;
-
-        cart.forEach(item => {
-
-            totalItems += Number(item.quantity) || 0;
-
-        });
-
-        if (cartCount) {
-
-            cartCount.textContent = totalItems;
-
-        }
+</footer>
 
 
-        /* Menu mobile */
+<script src="../js/main.js"></script>
 
-        const menuButton =
-            document.getElementById("menuButton");
+<script>
 
-        const mainNav =
-            document.getElementById("mainNav");
+const cart =
+    JSON.parse(
+        localStorage.getItem("toqueInvencivelCart") || "[]"
+    );
 
-        if (menuButton && mainNav) {
+const cartCount =
+    document.getElementById("cartCount");
 
-            menuButton.addEventListener("click", () => {
+if (cartCount) {
 
-                mainNav.classList.toggle("open");
+    cartCount.textContent =
+        cart.reduce(
+            (total, item) =>
+                total + Number(item.quantity || 0),
+            0
+        );
 
-                const aberto =
-                    mainNav.classList.contains("open");
+}
 
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    aberto
-                );
-
-            });
-
-        }
-
-    </script>
+</script>
 
 </body>
 </html>
