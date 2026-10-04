@@ -1401,3 +1401,321 @@ button {
     }
 
   }
+/* =========================================
+   CABEÇALHO GLOBAL — TOQUE INVENCÍVEL
+   Padrão: Creme + Preto + Dourado
+========================================= */
+
+.site-header {
+    width: 100%;
+    background: #f4eee2 !important;
+    border-bottom: 1px solid #ddd3c2;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-inner {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: #111111 !important;
+
+    flex-shrink: 0;
+}
+
+.logo-mark {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111111 !important;
+    color: #d4ad55 !important;
+
+    border-radius: 50%;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.logo-text strong {
+    color: #a67c20 !important;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+    line-height: 1;
+    letter-spacing: .5px;
+}
+
+.logo-text small {
+    color: #333333 !important;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 22px;
+}
+
+.main-nav a {
+    color: #111111 !important;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color .2s ease;
+}
+
+.main-nav a:hover {
+    color: #a67c20 !important;
+}
+
+
+/* =========================================
+   CARRINHO
+========================================= */
+
+.main-nav .cart-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 9px 13px;
+
+    background: #111111 !important;
+    color: #ffffff !important;
+
+    border-radius: 7px;
+}
+
+.main-nav .cart-link:hover {
+    background: #d4ad55 !important;
+    color: #111111 !important;
+}
+
+#cartCount {
+    min-width: 20px;
+    height: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d4ad55 !important;
+    color: #111111 !important;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   BOTÃO DO MENU MOBILE
+========================================= */
+
+.menu-button {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #111111 !important;
+    color: #d4ad55 !important;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .site-header {
+        background: #f4eee2 !important;
+    }
+
+    .header-inner {
+        min-height: 70px;
+
+        padding: 0 18px;
+
+        position: relative;
+    }
+
+
+    /* LOGO MENOR */
+
+    .logo-mark {
+        width: 34px;
+        height: 34px;
+
+        font-size: 12px;
+    }
+
+    .logo-text strong {
+        font-size: 17px;
+    }
+
+    .logo-text small {
+        font-size: 7px;
+        letter-spacing: .7px;
+    }
+
+
+    /* BOTÃO */
+
+    .menu-button {
+        display: flex;
+    }
+
+
+    /* MENU FECHADO */
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 12px;
+        right: 12px;
+
+        padding: 12px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 3px;
+
+        background: #ffffff !important;
+
+        border: 1px solid #ddd3c2;
+        border-radius: 10px;
+
+        box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    }
+
+
+    /* MENU ABERTO */
+
+    .main-nav.open {
+        display: flex;
+    }
+
+
+    .main-nav a {
+        display: block;
+
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 13px 14px;
+
+        color: #111111 !important;
+
+        border-radius: 6px;
+
+        font-size: 14px;
+    }
+
+    .main-nav a:hover {
+        background: #f4eee2 !important;
+        color: #a67c20 !important;
+    }
+
+
+    /* CARRINHO */
+
+    .main-nav .cart-link {
+        justify-content: space-between;
+
+        margin-top: 5px;
+
+        background: #111111 !important;
+        color: #ffffff !important;
+    }
+
+}
+
+
+/* =========================================
+   TELEMÓVEIS PEQUENOS
+========================================= */
+
+@media (max-width: 420px) {
+
+    .header-inner {
+        padding: 0 14px;
+    }
+
+    .logo-text strong {
+        font-size: 15px;
+    }
+
+    .logo-text small {
+        display: none;
+    }
+
+    .logo-mark {
+        width: 32px;
+        height: 32px;
+    }
+
+}
