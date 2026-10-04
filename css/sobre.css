@@ -1,0 +1,410 @@
+/* =====================================================
+   TOQUE INVENCÍVEL
+   PÁGINA SOBRE
+   ===================================================== */
+
+
+/* ================= HERO ================= */
+
+.sobre-hero {
+    background: #111111;
+
+    color: #ffffff;
+
+    padding: 95px 20px;
+
+    text-align: center;
+}
+
+.sobre-hero .container {
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.sobre-hero h1 {
+    margin: 0 auto 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.3rem, 5vw, 4.2rem);
+
+    line-height: 1.15;
+
+    color: #f4eee2;
+}
+
+.sobre-hero p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #eeeeee;
+
+    font-size: 1.08rem;
+
+    line-height: 1.8;
+}
+
+
+/* ================= PROPOSTA ================= */
+
+.sobre-proposta {
+    background: #f4eee2;
+
+    padding: 90px 20px;
+}
+
+.sobre-grid {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr 0.9fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.sobre-texto h2 {
+    margin: 0 0 25px;
+
+    font-family: "Playfair Display", serif;
+
+    color: #111111;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.2;
+}
+
+.sobre-texto p {
+    margin: 0 0 18px;
+
+    color: #292929;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* ================= DESTAQUE ================= */
+
+.sobre-destaque {
+    min-height: 400px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px;
+
+    background: #111111;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.destaque-inner {
+    width: 100%;
+
+    min-height: 320px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid #a9812f;
+
+    border-radius: 15px;
+
+    padding: 35px;
+}
+
+.destaque-icon {
+    color: #a9812f;
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+}
+
+.destaque-inner h3 {
+    margin: 0 0 15px;
+
+    font-family: "Playfair Display", serif;
+
+    color: #f4eee2;
+
+    font-size: 2rem;
+}
+
+.destaque-inner p {
+    max-width: 300px;
+
+    margin: 0;
+
+    color: #eeeeee;
+
+    line-height: 1.7;
+}
+
+
+/* ================= ENCONTRA ================= */
+
+.sobre-encontra {
+    background: #ffffff;
+
+    padding: 90px 20px;
+}
+
+.section-heading {
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 0 0 15px;
+
+    font-family: "Playfair Display", serif;
+
+    color: #111111;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.2;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: #333333;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* ================= CARDS ================= */
+
+.valores-grid {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.valor-card {
+    padding: 32px 25px;
+
+    border: 1px solid #e2ddd3;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.valor-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 22px;
+
+    border-radius: 50%;
+
+    background: #111111;
+
+    color: #a9812f;
+
+    font-size: 1.4rem;
+}
+
+.valor-card h3 {
+    margin: 0 0 12px;
+
+    color: #111111;
+
+    font-size: 1.2rem;
+}
+
+.valor-card p {
+    margin: 0;
+
+    color: #333333;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+/* ================= VISÃO ================= */
+
+.sobre-visao {
+    background: #111111;
+
+    padding: 90px 20px;
+}
+
+.visao-box {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    border: 1px solid #3a3a3a;
+
+    border-radius: 20px;
+
+    background: #181818;
+}
+
+.visao-box h2 {
+    margin: 0 0 20px;
+
+    font-family: "Playfair Display", serif;
+
+    color: #f4eee2;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.2;
+}
+
+.visao-box p {
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    color: #eeeeee;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+.visao-box .btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 950px) {
+
+    .sobre-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .valores-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .sobre-hero {
+        padding: 70px 20px;
+    }
+
+    .sobre-proposta,
+    .sobre-encontra,
+    .sobre-visao {
+        padding: 65px 18px;
+    }
+
+    .sobre-texto h2 {
+        font-size: 2rem;
+    }
+
+    .sobre-texto p {
+        font-size: 1rem;
+    }
+
+    .sobre-destaque {
+        min-height: 330px;
+
+        padding: 20px;
+    }
+
+    .destaque-inner {
+        min-height: 270px;
+
+        padding: 25px;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .valor-card {
+        padding: 28px 23px;
+    }
+
+    .visao-box {
+        padding: 40px 25px;
+    }
+
+    .visao-box .btn {
+        width: 100%;
+
+        min-height: 52px;
+    }
+
+}
