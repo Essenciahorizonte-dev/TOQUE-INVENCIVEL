@@ -1,0 +1,210 @@
+/* =========================================
+   TOQUE INVENCÍVEL
+   PÁGINA DE PRODUTO
+========================================= */
+
+.product-page {
+    padding: 60px 20px;
+    background: var(--cream);
+    min-height: 70vh;
+}
+
+.product-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: var(--gold);
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.product-image-box {
+    background: #e9e5dd;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image-box img {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    display: none;
+}
+
+.product-placeholder {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.product-placeholder span {
+    display: block;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.product-info {
+    padding-top: 10px;
+}
+
+.product-category {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.product-info h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 46px;
+    line-height: 1.1;
+    margin: 0 0 18px;
+    color: var(--black);
+}
+
+.product-price {
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 25px;
+}
+
+.product-description {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.product-stock {
+    display: inline-block;
+    background: #e4eee4;
+    color: #315b36;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.quantity-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.quantity-area label {
+    font-weight: 700;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.quantity-control button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.quantity-control button:hover {
+    background: #f1eee8;
+}
+
+.quantity-control input {
+    width: 50px;
+    height: 42px;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.add-cart-btn {
+    width: 100%;
+    max-width: 420px;
+    border: none;
+    background: var(--black);
+    color: white;
+    padding: 17px 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.product-note {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #d7d1c7;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 800px) {
+
+    .product-page {
+        padding: 35px 16px;
+    }
+
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-image-box {
+        min-height: 380px;
+    }
+
+    .product-image-box img {
+        min-height: 380px;
+    }
+
+    .product-info h1 {
+        font-size: 36px;
+    }
+
+    .product-price {
+        font-size: 24px;
+    }
+  }
