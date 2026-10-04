@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Carrinho de compras da Toque Invencível.">
+
+    <title>Carrinho | Toque Invencível</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/carrinho.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <a href="../index.html" class="logo">
+
+            <span class="logo-mark">
+                TI
+            </span>
+
+            <span class="logo-text">
+
+                TOQUE INVENCÍVEL
+
+                <small>
+                    COSMÉTICOS • GUIAS • CUIDADOS
+                </small>
+
+            </span>
+
+        </a>
+
+        <button class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menu">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+
+            <a href="../index.html">
+                Início
+            </a>
+
+            <a href="loja.html">
+                Loja
+            </a>
+
+            <a href="guias.html">
+                Guias
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+        <a href="carrinho.html"
+           class="cart-button">
+
+            🛒
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="cart-page">
+
+    <div class="cart-container">
+
+        <h1 class="cart-title">
+            O seu carrinho
+        </h1>
+
+        <p class="cart-subtitle">
+            Reveja os produtos antes de continuar.
+        </p>
+
+
+        <div id="emptyCart"
+             class="empty-cart"
+             style="display:none;">
+
+            <div class="empty-cart-icon">
+                🛒
+            </div>
+
+            <h2>
+                O seu carrinho está vazio
+            </h2>
+
+            <p>
+                Ainda não adicionou nenhum produto.
+            </p>
+
+            <a href="loja.html"
+               class="shop-btn">
+                VER PRODUTOS
+            </a>
+
+        </div>
+
+
+        <div id="cartContent"
+             class="cart-layout">
+
+            <section>
+
+                <div id="cartItems"
+                     class="cart-items">
+                </div>
+
+            </section>
+
+
+            <aside class="cart-summary">
+
+                <h2>
+                    Resumo
+                </h2>
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <span id="subtotal">
+                        0 MT
+                    </span>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Entrega
+                    </span>
+
+                    <span id="delivery">
+                        A calcular
+                    </span>
+
+                </div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <span id="total">
+                        0 MT
+                    </span>
+
+                </div>
+
+
+                <a href="checkout.html"
+                   class="checkout-btn">
+                    CONTINUAR PARA CHECKOUT
+                </a>
+
+
+                <a href="loja.html"
+                   class="continue-shopping">
+                    ← Continuar a comprar
+                </a>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <h3>
+                Toque Invencível
+            </h3>
+
+            <p>
+                Beleza é cuidado.
+                Cuidado é poder.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/main.js"></script>
+
+
+<script>
+
+/* =========================================
+   DADOS DO CARRINHO
+========================================= */
+
+const CART_KEY =
+    "toqueInvencivelCart";
+
+
+function getCart() {
+
+    return JSON.parse(
+        localStorage.getItem(CART_KEY)
+    ) || [];
+
+}
+
+
+function saveCart(cart) {
+
+    localStorage.setItem(
+        CART_KEY,
+        JSON.stringify(cart)
+    );
+
+}
+
+
+/* =========================================
+   FORMATAR PREÇO
+========================================= */
+
+function formatPrice(value) {
+
+    return Number(value).toLocaleString(
+        "pt-MZ"
+    ) + " MT";
+
+}
+
+
+/* =========================================
+   MOSTRAR CARRINHO
+========================================= */
+
+function renderCart() {
+
+    const cart = getCart();
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const cartContent =
+        document.getElementById("cartContent");
+
+    const emptyCart =
+        document.getElementById("emptyCart");
+
+
+    if (cart.length === 0) {
+
+        cartContent.style.display = "none";
+
+        emptyCart.style.display = "block";
+
+        updateCartCount();
+
+        return;
+
+    }
+
+
+    cartContent.style.display = "grid";
+
+    emptyCart.style.display = "none";
+
+
+    cartItems.innerHTML = "";
+
+
+    let subtotal = 0;
+
+
+    cart.forEach((product, index) => {
+
+        const itemTotal =
+            Number(product.price) *
+            Number(product.quantity);
+
+
+        subtotal += itemTotal;
+
+
+        const item =
+            document.createElement("article");
+
+        item.className = "cart-item";
+
+
+        item.innerHTML = `
+
+            <div class="cart-item-image">
+
+                FOTO
+
+            </div>
+
+
+            <div>
+
+                <div class="cart-item-name">
+
+                    ${product.name}
+
+                </div>
+
+
+                <div class="cart-item-price">
+
+                    ${formatPrice(product.price)}
+
+                </div>
+
+
+                <div class="cart-item-controls">
+
+                    <button
+                        onclick="changeQuantity(${index}, -1)">
+                        −
+                    </button>
+
+                    <span>
+                        ${product.quantity}
+                    </span>
+
+                    <button
+                        onclick="changeQuantity(${index}, 1)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="remove-item"
+                    onclick="removeItem(${index})">
+
+                    Remover
+
+                </button>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    ${formatPrice(itemTotal)}
+                </strong>
+
+            </div>
+
+        `;
+
+
+        cartItems.appendChild(item);
+
+    });
+
+
+    document.getElementById(
+        "subtotal"
+    ).textContent =
+        formatPrice(subtotal);
+
+
+    /*
+       A entrega ainda será calculada
+       no checkout conforme a localização.
+    */
+
+    document.getElementById(
+        "delivery"
+    ).textContent =
+        "A calcular";
+
+
+    document.getElementById(
+        "total"
+    ).textContent =
+        formatPrice(subtotal);
+
+
+    updateCartCount();
+
+}
+
+
+/* =========================================
+   ALTERAR QUANTIDADE
+========================================= */
+
+function changeQuantity(index, change) {
+
+    const cart = getCart();
+
+
+    cart[index].quantity += change;
+
+
+    if (cart[index].quantity <= 0) {
+
+        cart.splice(index, 1);
+
+    }
+
+
+    saveCart(cart);
+
+    renderCart();
+
+}
+
+
+/* =========================================
+   REMOVER PRODUTO
+========================================= */
+
+function removeItem(index) {
+
+    const cart = getCart();
+
+
+    cart.splice(index, 1);
+
+
+    saveCart(cart);
+
+    renderCart();
+
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+function updateCartCount() {
+
+    const cart = getCart();
+
+
+    const total =
+        cart.reduce(
+            (sum, item) =>
+                sum + Number(item.quantity),
+            0
+        );
+
+
+    const cartCount =
+        document.getElementById(
+            "cartCount"
+        );
+
+
+    if (cartCount) {
+
+        cartCount.textContent =
+            total;
+
+    }
+
+}
+
+
+/* =========================================
+   INICIAR
+========================================= */
+
+renderCart();
+
+</script>
+
+</body>
+
+  </html>
