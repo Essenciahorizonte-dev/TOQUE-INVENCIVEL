@@ -1,54 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Carrinho | Toque Invencível</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>
+        Carrinho | Toque Invencível
+    </title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/carrinho.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/carrinho.css"
+    >
+
 </head>
 
+
 <body>
+
+
+<!-- =========================================
+     CABEÇALHO
+========================================= -->
 
 <header class="site-header">
 
     <div class="container header-inner">
 
-        <a href="../index.html" class="logo">
-            <span class="logo-mark">TI</span>
+
+        <a
+            href="../index.html"
+            class="logo"
+        >
+
+            <span class="logo-mark">
+                TI
+            </span>
+
 
             <span class="logo-text">
-                <strong>TOQUE INVENCÍVEL</strong>
-                <small>Beleza é cuidado. Cuidado é poder.</small>
+
+                <strong>
+                    TOQUE INVENCÍVEL
+                </strong>
+
+                <small>
+                    Beleza é cuidado. Cuidado é poder.
+                </small>
+
             </span>
+
         </a>
+
 
         <button
             class="menu-button"
             id="menuButton"
             aria-label="Abrir menu"
+            type="button"
         >
             ☰
         </button>
 
-        <nav class="main-nav" id="mainNav">
 
-            <a href="../index.html">Início</a>
-            <a href="loja.html">Loja</a>
-            <a href="guias.html">Guias</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contacto.html">Contacto</a>
+        <nav
+            class="main-nav"
+            id="mainNav"
+        >
 
-            <a href="carrinho.html" class="cart-link">
+            <a href="../index.html">
+                Início
+            </a>
+
+            <a href="loja.html">
+                Loja
+            </a>
+
+            <a href="guias.html">
+                Guias
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+
+            <a
+                href="carrinho.html"
+                class="cart-link"
+            >
+
                 Carrinho
-                <span id="cartCount">0</span>
+
+                <span id="cartCount">
+                    0
+                </span>
+
             </a>
 
         </nav>
@@ -58,39 +138,63 @@
 </header>
 
 
+
+<!-- =========================================
+     CONTEÚDO
+========================================= -->
+
 <main class="cart-page">
+
 
     <section class="cart-heading">
 
-        <span>SEU CARRINHO</span>
+        <span>
+            SEU CARRINHO
+        </span>
+
 
         <h1>
-            A sua <strong>seleção</strong>
+
+            A sua
+            <strong>
+                seleção
+            </strong>
+
         </h1>
 
+
         <p>
-            Reveja os produtos antes de finalizar o seu pedido.
+            Reveja os produtos antes de finalizar
+            o seu pedido.
         </p>
 
     </section>
+
 
 
     <section class="cart-container">
 
         <div id="cartContent">
 
-            <!-- Produtos inseridos pelo JavaScript -->
+            <!-- O JavaScript coloca os produtos aqui -->
 
         </div>
 
     </section>
 
+
 </main>
 
+
+
+<!-- =========================================
+     RODAPÉ
+========================================= -->
 
 <footer class="site-footer">
 
     <div class="container footer-inner">
+
 
         <div>
 
@@ -128,6 +232,7 @@
                 Redes sociais
             </strong>
 
+
             <a
                 href="https://www.facebook.com/profile.php?id=61595159517383"
                 target="_blank"
@@ -135,6 +240,7 @@
             >
                 Facebook
             </a>
+
 
             <a
                 href="https://wa.me/258856948492"
@@ -146,29 +252,67 @@
 
         </div>
 
+
     </div>
 
 </footer>
 
 
+
+<!-- =========================================
+     JAVASCRIPT PRINCIPAL
+========================================= -->
+
 <script src="../js/main.js"></script>
 
 
+
+<!-- =========================================
+     JAVASCRIPT DO CARRINHO
+========================================= -->
+
 <script>
 
-const CART_KEY = "toqueInvencivelCart";
+const CART_KEY =
+    "toqueInvencivelCart";
 
 const DELIVERY_FEE = 50;
 
 
+/* =========================================
+   LER CARRINHO
+========================================= */
+
 function getCart() {
 
-    return JSON.parse(
-        localStorage.getItem(CART_KEY) || "[]"
-    );
+    try {
+
+        const cart =
+            JSON.parse(
+                localStorage.getItem(CART_KEY) || "[]"
+            );
+
+        return Array.isArray(cart)
+            ? cart
+            : [];
+
+    } catch (error) {
+
+        console.error(
+            "Erro ao ler carrinho:",
+            error
+        );
+
+        return [];
+
+    }
 
 }
 
+
+/* =========================================
+   GUARDAR CARRINHO
+========================================= */
 
 function saveCart(cart) {
 
@@ -180,35 +324,70 @@ function saveCart(cart) {
 }
 
 
+/* =========================================
+   CONTADOR
+========================================= */
+
 function updateCartCount() {
 
-    const cart = getCart();
+    const cart =
+        getCart();
 
-    const count = cart.reduce(
-        (total, item) =>
-            total + Number(item.quantity || 0),
-        0
-    );
+
+    const count =
+        cart.reduce(
+            (total, item) => {
+
+                return total +
+                    Number(item.quantity || 0);
+
+            },
+            0
+        );
+
 
     const cartCount =
-        document.getElementById("cartCount");
+        document.getElementById(
+            "cartCount"
+        );
+
 
     if (cartCount) {
-        cartCount.textContent = count;
+
+        cartCount.textContent =
+            count;
+
     }
 
 }
 
 
+/* =========================================
+   DESENHAR CARRINHO
+========================================= */
+
 function renderCart() {
 
-    const cart = getCart();
-
     const container =
-        document.getElementById("cartContent");
+        document.getElementById(
+            "cartContent"
+        );
 
 
-    if (!cart.length) {
+    if (!container) {
+        return;
+    }
+
+
+    const cart =
+        getCart();
+
+
+    /* =====================================
+       CARRINHO VAZIO
+    ===================================== */
+
+    if (cart.length === 0) {
 
         container.innerHTML = `
 
@@ -218,18 +397,22 @@ function renderCart() {
                     🛍️
                 </div>
 
+
                 <span>
                     O SEU CARRINHO ESTÁ VAZIO
                 </span>
+
 
                 <h2>
                     Ainda não escolheu nenhum produto.
                 </h2>
 
+
                 <p>
                     Explore a nossa loja e encontre
                     o que procura.
                 </p>
+
 
                 <a
                     href="loja.html"
@@ -242,33 +425,57 @@ function renderCart() {
 
         `;
 
+
         updateCartCount();
 
         return;
+
     }
 
+
+    /* =====================================
+       CALCULAR SUBTOTAL
+    ===================================== */
 
     let subtotal = 0;
 
 
-    const itemsHTML = cart.map(
+    let itemsHTML = "";
+
+
+    cart.forEach(
         (item, index) => {
 
             const quantity =
-                Number(item.quantity || 1);
+                Math.max(
+                    1,
+                    Number(item.quantity || 1)
+                );
+
 
             const price =
-                Number(item.price || 0);
+                Math.max(
+                    0,
+                    Number(item.price || 0)
+                );
+
 
             const itemTotal =
                 quantity * price;
 
+
             subtotal += itemTotal;
 
 
-            return `
+            const productName =
+                item.name ||
+                "Produto Toque Invencível";
+
+
+            itemsHTML += `
 
                 <article class="cart-item">
+
 
                     <div class="cart-product-image">
 
@@ -279,13 +486,16 @@ function renderCart() {
 
                     <div class="cart-product-info">
 
+
                         <span class="product-category">
                             PRODUTO
                         </span>
 
+
                         <h2>
-                            ${item.name}
+                            ${productName}
                         </h2>
+
 
                         <p>
                             ${price} MT por unidade
@@ -294,7 +504,9 @@ function renderCart() {
 
                         <div class="cart-product-actions">
 
+
                             <div class="quantity-control">
+
 
                                 <button
                                     type="button"
@@ -304,9 +516,11 @@ function renderCart() {
                                     −
                                 </button>
 
+
                                 <strong>
                                     ${quantity}
                                 </strong>
+
 
                                 <button
                                     type="button"
@@ -315,6 +529,7 @@ function renderCart() {
                                 >
                                     +
                                 </button>
+
 
                             </div>
 
@@ -327,7 +542,9 @@ function renderCart() {
                                 Remover
                             </button>
 
+
                         </div>
+
 
                     </div>
 
@@ -338,38 +555,61 @@ function renderCart() {
                             TOTAL
                         </span>
 
+
                         <strong>
                             ${itemTotal} MT
                         </strong>
 
                     </div>
 
+
                 </article>
 
             `;
 
         }
-    ).join("");
+    );
 
+
+    /* =====================================
+       TOTAL
+    ===================================== */
 
     const total =
         subtotal + DELIVERY_FEE;
 
 
+    /* =====================================
+       MOSTRAR
+    ===================================== */
+
     container.innerHTML = `
 
         <div class="cart-layout">
 
+
+            <!-- PRODUTOS -->
+
             <div class="cart-products">
 
+
                 <div class="cart-products-header">
+
 
                     <div>
 
                         <span>
+
                             ${cart.length}
-                            ${cart.length === 1 ? "ITEM" : "ITENS"}
+
+                            ${
+                                cart.length === 1
+                                    ? "ITEM"
+                                    : "ITENS"
+                            }
+
                         </span>
+
 
                         <h2>
                             Produtos selecionados
@@ -377,11 +617,206 @@ function renderCart() {
 
                     </div>
 
+
                     <a href="loja.html">
                         Continuar a comprar
                     </a>
 
+
                 </div>
 
 
-                <div class="cart
+                <div class="cart-items">
+
+                    ${itemsHTML}
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RESUMO -->
+
+            <aside class="cart-summary">
+
+
+                <div class="summary-label">
+                    RESUMO DO PEDIDO
+                </div>
+
+
+                <h2>
+                    Total da compra
+                </h2>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong>
+                        ${subtotal} MT
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Taxa de entrega
+                    </span>
+
+                    <strong>
+                        ${DELIVERY_FEE} MT
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong>
+                        ${total} MT
+                    </strong>
+
+                </div>
+
+
+                <p class="delivery-note">
+
+                    A taxa de entrega de 50 MT
+                    será adicionada ao seu pedido.
+
+                </p>
+
+
+                <a
+                    href="checkout.html"
+                    class="cart-button cart-button-primary"
+                >
+                    FINALIZAR PEDIDO
+                </a>
+
+
+                <a
+                    href="loja.html"
+                    class="cart-button cart-button-secondary"
+                >
+                    CONTINUAR A COMPRAR
+                </a>
+
+
+            </aside>
+
+
+        </div>
+
+    `;
+
+
+    updateCartCount();
+
+}
+
+
+/* =========================================
+   ALTERAR QUANTIDADE
+========================================= */
+
+function changeQuantity(index, change) {
+
+    const cart =
+        getCart();
+
+
+    if (!cart[index]) {
+        return;
+    }
+
+
+    let quantity =
+        Number(
+            cart[index].quantity || 1
+        );
+
+
+    quantity += change;
+
+
+    if (quantity <= 0) {
+
+        cart.splice(index, 1);
+
+    } else {
+
+        cart[index].quantity =
+            quantity;
+
+    }
+
+
+    saveCart(cart);
+
+    renderCart();
+
+}
+
+
+/* =========================================
+   REMOVER PRODUTO
+========================================= */
+
+function removeItem(index) {
+
+    const cart =
+        getCart();
+
+
+    if (!cart[index]) {
+        return;
+    }
+
+
+    cart.splice(index, 1);
+
+
+    saveCart(cart);
+
+    renderCart();
+
+}
+
+
+/* =========================================
+   INICIAR
+========================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        renderCart();
+
+        updateCartCount();
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
