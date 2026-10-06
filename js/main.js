@@ -50,9 +50,7 @@ function getToqueInvencivelCart() {
     try {
 
         const savedCart =
-            localStorage.getItem(
-                CART_KEY
-            );
+            localStorage.getItem(CART_KEY);
 
 
         const cart =
@@ -72,7 +70,6 @@ function getToqueInvencivelCart() {
             error
         );
 
-
         return [];
 
     }
@@ -81,7 +78,7 @@ function getToqueInvencivelCart() {
 
 
 /* =========================================
-   CONTADOR GLOBAL DO CARRINHO
+   CONTADOR GLOBAL
 ========================================= */
 
 function updateToqueInvencivelCartCount() {
@@ -109,18 +106,14 @@ function updateToqueInvencivelCartCount() {
         );
 
 
-
     /*
-     * Aceita tanto:
+     * Funciona com:
      *
      * id="cartCount"
      *
-     * como:
+     * e também:
      *
      * class="cart-count"
-     *
-     * Assim todas as páginas podem
-     * utilizar o mesmo contador.
      */
 
     const cartCounters =
@@ -142,7 +135,7 @@ function updateToqueInvencivelCartCount() {
 
 
 /* =========================================
-   ATUALIZAR AO ABRIR QUALQUER PÁGINA
+   EXECUTAR QUANDO A PÁGINA ABRIR
 ========================================= */
 
 document.addEventListener(
@@ -156,7 +149,7 @@ document.addEventListener(
 
 
 /* =========================================
-   ATUALIZAR QUANDO O STORAGE MUDA
+   ATUALIZAR QUANDO O STORAGE MUDAR
 ========================================= */
 
 window.addEventListener(
