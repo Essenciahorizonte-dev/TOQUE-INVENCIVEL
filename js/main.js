@@ -10,34 +10,60 @@ const CART_KEY = "toqueInvencivelCart";
    MENU MOBILE
 ========================================= */
 
-const menuButton = document.getElementById("menuButton");
-const mainNav = document.getElementById("mainNav");
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
-if (menuButton && mainNav) {
+        const menuButton =
+            document.getElementById("menuButton");
 
-    menuButton.addEventListener("click", () => {
+        const mainNav =
+            document.getElementById("mainNav");
 
-        mainNav.classList.toggle("open");
 
-    });
+        if (
+            menuButton &&
+            mainNav
+        ) {
 
-}
+            menuButton.addEventListener(
+                "click",
+                function () {
+
+                    mainNav.classList.toggle("open");
+
+                }
+            );
+
+        }
+
+    }
+);
 
 
 /* =========================================
-   CONTADOR GLOBAL DO CARRINHO
+   LER CARRINHO
 ========================================= */
 
 function getToqueInvencivelCart() {
 
     try {
 
-        const cart =
-            JSON.parse(
-                localStorage.getItem(CART_KEY) || "[]"
+        const savedCart =
+            localStorage.getItem(
+                CART_KEY
             );
 
-        return Array.isArray(cart) ? cart : [];
+
+        const cart =
+            JSON.parse(
+                savedCart || "[]"
+            );
+
+
+        return Array.isArray(cart)
+            ? cart
+            : [];
 
     } catch (error) {
 
@@ -46,6 +72,7 @@ function getToqueInvencivelCart() {
             error
         );
 
+
         return [];
 
     }
@@ -53,47 +80,90 @@ function getToqueInvencivelCart() {
 }
 
 
+/* =========================================
+   CONTADOR GLOBAL DO CARRINHO
+========================================= */
+
 function updateToqueInvencivelCartCount() {
 
     const cart =
         getToqueInvencivelCart();
 
+
     const count =
         cart.reduce(
-            (total, item) => {
+            function (
+                total,
+                item
+            ) {
 
-                return total +
-                    Number(item.quantity || 0);
+                return (
+                    total +
+                    Number(
+                        item.quantity || 0
+                    )
+                );
 
             },
             0
         );
 
 
+
+    /*
+     * Aceita tanto:
+     *
+     * id="cartCount"
+     *
+     * como:
+     *
+     * class="cart-count"
+     *
+     * Assim todas as páginas podem
+     * utilizar o mesmo contador.
+     */
+
     const cartCounters =
-        document.querySelectorAll("#cartCount");
+        document.querySelectorAll(
+            "#cartCount, .cart-count"
+        );
 
 
-    cartCounters.forEach((counter) => {
+    cartCounters.forEach(
+        function (counter) {
 
-        counter.textContent = count;
+            counter.textContent =
+                count;
 
-    });
+        }
+    );
 
 }
 
 
-/* Atualizar quando a página abre */
+/* =========================================
+   ATUALIZAR AO ABRIR QUALQUER PÁGINA
+========================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
-    updateToqueInvencivelCartCount
+    function () {
+
+        updateToqueInvencivelCartCount();
+
+    }
 );
 
 
-/* Atualizar quando o carrinho muda */
+/* =========================================
+   ATUALIZAR QUANDO O STORAGE MUDA
+========================================= */
 
 window.addEventListener(
     "storage",
-    updateToqueInvencivelCartCount
+    function () {
+
+        updateToqueInvencivelCartCount();
+
+    }
 );
